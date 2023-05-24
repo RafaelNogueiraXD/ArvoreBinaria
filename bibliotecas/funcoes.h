@@ -26,12 +26,14 @@ typedef struct No {
     char* year;
     char* genre;
     char* notes;
+    char *capa;
+    char *imagem;
     struct No* esquerda;
     struct No* direita;
 } No;
 
 // Função para criar um novo nó
-No* criarNo(char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes) {
+No* criarNo(char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes, char* capa, char * imagem) {
     No* novoNo = (No*)malloc(sizeof(No));
     novoNo->chave = strdup(chave);
     novoNo->searsTitle = strdup(searsTitle);
@@ -40,22 +42,24 @@ No* criarNo(char* chave, char* searsTitle, char* code, char* designerOrProgramme
     novoNo->year = strdup(year);
     novoNo->genre = strdup(genre);
     novoNo->notes = strdup(notes);
+    novoNo->capa = strdup(capa);
+    novoNo->imagem = strdup(imagem);
     novoNo->esquerda = NULL;
     novoNo->direita = NULL;
     return novoNo;
 }
 
 // Função para inserir um nó na árvore
-No* inserirNo(No* raiz, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes) {
+No* inserirNo(No* raiz, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes, char*capa, char *imagem) {
     if (raiz == NULL) {
-        return criarNo(chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
+        return criarNo(chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
     }
 
     int comparacao = strcmp(chave, raiz->chave);
     if (comparacao < 0) {
-        raiz->esquerda = inserirNo(raiz->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
+        raiz->esquerda = inserirNo(raiz->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
     } else if (comparacao > 0) {
-        raiz->direita = inserirNo(raiz->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
+        raiz->direita = inserirNo(raiz->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa , imagem);
     }
 
     return raiz;
@@ -138,13 +142,31 @@ No* lerArquivo(char* nomeArquivo, char*** VetorNomes, int* total) {
             troca = 1;
 
         if (troca == 0)
-            raiz = inserirNo(raiz, columns[0], columns[1], columns[2], columns[3], columns[4], columns[5], columns[6]);
+            raiz = inserirNo(raiz, columns[0], columns[1], columns[2], columns[3], columns[4], columns[5], columns[6], "vazio", "vazio");
         else
-            raiz = inserirNo(raiz, columns[0], "Vazio", "Vazio", columns[1], columns[3], columns[4], columns[5]);
+            raiz = inserirNo(raiz, columns[0], "Vazio", "Vazio", columns[1], columns[3], columns[4], columns[5], "vazio", "vazio");
     }
 
     fclose(file);
     return raiz;
+}
+
+int buscaPrefixo(No* raiz, char prefixo[]) {
+    static int achado = 0;
+    if (raiz == NULL) {
+        return achado;
+    }
+    int comparacao = strncmp(prefixo, raiz->chave, strlen(prefixo));
+    if (comparacao == 0) {
+        printf("%s\n", raiz->chave);
+        achado++;
+    }
+    if (comparacao <= 0) {
+        buscaPrefixo(raiz->esquerda, prefixo);
+    }
+    if (comparacao >= 0) {
+        buscaPrefixo(raiz->direita, prefixo);
+    }
 }
 
 void liberarMemoria(char** VetorNomes, int total) {

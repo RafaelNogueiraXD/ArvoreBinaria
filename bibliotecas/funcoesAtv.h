@@ -1,8 +1,7 @@
 No* buscarNo(No* raiz, char* chave) {
     if (raiz == NULL || strcmp(chave, raiz->chave) == 0) {
         return raiz;
-    }
-
+    }\
     if (strcmp(chave, raiz->chave) < 0) {
         return buscarNo(raiz->esquerda, chave);
     } else {
@@ -17,31 +16,33 @@ void mostraBusca(No* raiz){
     printf("Year: %s\n", raiz->year);
     printf("Genre: %s\n", raiz->genre);
     printf("Notes: %s\n\n", raiz->notes);  
+    printf("Imagem de Capa: %s\n", raiz->capa);
+    printf("Imagem do Jogo: %s\n",raiz->imagem);
 }
-No* inserirNo2(No* raiz, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes) {
-    if (raiz == NULL) {
-        No* novoNo = (No*)malloc(sizeof(No));
-        novoNo->chave = strdup(chave);
-        novoNo->searsTitle = strdup(searsTitle);
-        novoNo->code = strdup(code);
-        novoNo->designerOrProgrammer = strdup(designerOrProgrammer);
-        novoNo->year = strdup(year);
-        novoNo->genre = strdup(genre);
-        novoNo->notes = strdup(notes);
-        novoNo->esquerda = NULL;
-        novoNo->direita = NULL;
-        return novoNo;
-    }
+// No* inserirNo2(No* raiz, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes) {
+//     if (raiz == NULL) {
+//         No* novoNo = (No*)malloc(sizeof(No));
+//         novoNo->chave = strdup(chave);
+//         novoNo->searsTitle = strdup(searsTitle);
+//         novoNo->code = strdup(code);
+//         novoNo->designerOrProgrammer = strdup(designerOrProgrammer);
+//         novoNo->year = strdup(year);
+//         novoNo->genre = strdup(genre);
+//         novoNo->notes = strdup(notes);
+//         novoNo->esquerda = NULL;
+//         novoNo->direita = NULL;
+//         return novoNo;
+//     }
 
-    int comparacao = strcmp(chave, raiz->chave);
-    if (comparacao < 0) {
-        raiz->esquerda = inserirNo2(raiz->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
-    } else if (comparacao > 0) {
-        raiz->direita = inserirNo2(raiz->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
-    }
+//     int comparacao = strcmp(chave, raiz->chave);
+//     if (comparacao < 0) {
+//         raiz->esquerda = inserirNo2(raiz->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
+//     } else if (comparacao > 0) {
+//         raiz->direita = inserirNo2(raiz->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
+//     }
 
-    return raiz;
-}
+//     return raiz;
+// }
 No* encontrarMinimo(No* raiz) {
     if (raiz->esquerda == NULL) {
         return raiz;
@@ -99,6 +100,25 @@ No* removerNo(No* raiz, char* chave) {
             raiz->direita = removerNo(raiz->direita, minimo->chave);
         }
     }
-
     return raiz;
+}
+void percorrerEmOrdemArquivo(No* raiz, FILE* arquivo) {
+    if (raiz != NULL) {
+        percorrerEmOrdemArquivo(raiz->esquerda, arquivo);
+        fprintf(arquivo, "%s,%s,%s,%s,%s,%s,%s\n", raiz->chave, raiz->searsTitle, raiz->code, raiz->designerOrProgrammer, raiz->year, raiz->genre, raiz->notes);
+        percorrerEmOrdemArquivo(raiz->direita, arquivo);
+    }
+}
+
+void exportarArvoreParaCSV(No* raiz, const char* nomeArquivo) {
+    FILE* arquivo = fopen(nomeArquivo, "w");
+    if (arquivo == NULL) {
+        printf("Erro ao criar o arquivo %s.\n", nomeArquivo);
+        return;
+    }
+
+    percorrerEmOrdemArquivo(raiz, arquivo);
+
+    fclose(arquivo);
+    printf("Arquivo %s exportado com sucesso.\n", nomeArquivo);
 }
