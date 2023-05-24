@@ -122,3 +122,62 @@ void exportarArvoreParaCSV(No* raiz, const char* nomeArquivo) {
     fclose(arquivo);
     printf("Arquivo %s exportado com sucesso.\n", nomeArquivo);
 }
+
+void atualizarDados(No* raiz, char* chave) {
+    char novoSearsTitle[MAX_TAM_NOME];
+    char novoCode[MAX_TAM_NOME];
+    char novoDesignerOrProgrammer[MAX_TAM_NOME];
+    char novoYear[MAX_TAM_NOME];
+    char novoGenre[MAX_TAM_NOME];
+    char novoNotes[MAX_TAM_NOME];
+    char novaCapa[MAX_TAM_NOME];
+    char novaImagem[MAX_TAM_NOME];
+
+    if (raiz == NULL) {
+        printf("A chave fornecida nao foi encontrada na arvore.\n");
+        return;
+    }
+
+    int comparacao = strcmp(chave, raiz->chave);
+    if (comparacao == 0) {
+        // Atualizar os dados do nó
+        printf("\n\tDado encontrado, digite as novas informacoes:");
+        strcpy(novoSearsTitle, obterChar("Titulo",1));
+        strcpy(novoCode,obterChar("Codigo",1));
+        strcpy(novoDesignerOrProgrammer,obterChar("Designer ou programador",1));
+        strcpy(novoYear,obterChar(" Ano ",1));
+        strcpy(novoGenre,obterChar("Genero",1));
+        strcpy(novoNotes,obterChar("Notes", 100));
+        strcpy(novaCapa,obterChar("Link Capa",4));
+        strcpy(novaImagem,obterChar("Link Imagem", 4));
+        free(raiz->searsTitle);
+        raiz->searsTitle = strdup(novoSearsTitle);
+
+        free(raiz->code);
+        raiz->code = strdup(novoCode);
+
+        free(raiz->designerOrProgrammer);
+        raiz->designerOrProgrammer = strdup(novoDesignerOrProgrammer);
+
+        free(raiz->year);
+        raiz->year = strdup(novoYear);
+
+        free(raiz->genre);
+        raiz->genre = strdup(novoGenre);
+
+        free(raiz->notes);
+        raiz->notes = strdup(novoNotes);
+
+        free(raiz->capa);
+        raiz->capa = strdup(novaCapa);
+
+        free(raiz->imagem);
+        raiz->imagem = strdup(novaImagem);
+
+        printf("Dados atualizados com sucesso para a chave: %s\n", chave);
+    } else if (comparacao < 0) {
+        atualizarDados(raiz->esquerda, chave);
+    } else {
+        atualizarDados(raiz->direita, chave);
+    }
+}
