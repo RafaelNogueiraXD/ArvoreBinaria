@@ -1,3 +1,5 @@
+caso não consiga abrir tem o link no github:
+https://github.com/RafaelNogueiraXD/ArvoreBinaria
 Informações:
 
 Este trabalho foi divido em 4 arquivos.
