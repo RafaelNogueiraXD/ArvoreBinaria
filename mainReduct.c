@@ -3,22 +3,22 @@
 #include <string.h>
 #include "bibliotecas/funcoes.h"
 #include "bibliotecas/funcoesAtv.h"
-
+#include "bibliotecas/busca.h"
 int main() {
     No* raiz = NULL;
     char** VetorNomes = NULL;
-    int total = 0, opcao;
+    int total = 0, opcao, buscaOp;
     char caracter[MAX_TAM_NOME];
-    raiz = lerArquivo2("../dados/arquivo.csv", &VetorNomes, &total);
+    raiz = lerArquivo2("../dados/dataBase44444.csv", &VetorNomes, &total);
     if (raiz == NULL) {
         liberarMemoria(VetorNomes, total);
         return 1;
     }
     do{
-        menu(); 
+        menu();
+        printf("\n\t escolha: "); 
         scanf("%d", &opcao);
         getchar(); // Limpar o caractere de nova linha deixado por scanf
-
         switch (opcao) {
         case 0:
             printf("\nFechando programa.\n");
@@ -32,6 +32,7 @@ int main() {
             break;
         case 3:
             strcpy(caracter,obterChar("nome",1));
+
             removerNo(raiz, caracter);
             break;
         case 4:
@@ -39,10 +40,9 @@ int main() {
             if (buscarNo(raiz, caracter) != NULL)
                 mostraBusca(buscarNo(raiz, caracter));
             else{ 
-                printf("\n\tNao foi encontrado nenhum Item com esse nome 1m especifico!");
                 printf("\nAqui esta uma lista do que voce quis dizer: \n");
                 printf("Valores encontrados: %d", buscaPrefixo(raiz, caracter, 0));
-            } 
+            }
            break;
         case 5:
             percorrerEmOrdem(raiz);

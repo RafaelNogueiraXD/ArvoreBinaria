@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "funcoes.h": "c",
-        "funcoesatv.h": "c"
+        "funcoesatv.h": "c",
+        "busca.h": "c"
     }
 }

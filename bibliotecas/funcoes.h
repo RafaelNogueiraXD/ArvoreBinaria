@@ -111,7 +111,7 @@ No* lerArquivo2(char* nomeArquivo, char*** VetorNomes, int* total) {
         printf("Erro ao abrir o arquivo.\n");
         return NULL;
     }
-    printf("\nAchamos o arquivo!\n");
+    printf("\nAchamos o arquivo %s!\n", nomeArquivo);
 
     No* raiz = NULL;
     char line[MAX_LINE_LENGTH];
@@ -182,10 +182,8 @@ No* lerArquivo(char* nomeArquivo, char*** VetorNomes, int* total) {
         (*VetorNomes)[*total] = malloc(strlen(columns[0]) + 1);
         strcpy((*VetorNomes)[*total], columns[0]);
         (*total)++;
-
         if (strcmp(columns[0], "Acid Drop") == 0)
             troca = 1;
-
         if (troca == 0)
             raiz = inserirNo(raiz, columns[0], columns[1], columns[2], columns[3], columns[4], columns[5], columns[6], "vazio", "vazio");
         else
@@ -195,7 +193,6 @@ No* lerArquivo(char* nomeArquivo, char*** VetorNomes, int* total) {
     fclose(file);
     return raiz;
 }
-
 int buscaPrefixo(No* raiz, char prefixo[], int achado) {
     if (raiz == NULL) {
         return achado;
@@ -214,6 +211,8 @@ int buscaPrefixo(No* raiz, char prefixo[], int achado) {
     return achado;
 }
 
+
+
 void liberarMemoria(char** VetorNomes, int total) {
     for (int i = 0; i < total; i++) {
         free(VetorNomes[i]);
@@ -230,4 +229,17 @@ char* obterChar(char *anunciado, int tamanho) {
         newGame[length - 1] = '\0';
     }
     return newGame;
+}
+
+void menuBuscas(){
+    printf("\n Voce pode pesquisar por: ");
+    printf("\n\t 1 - Nome");
+    printf("\n\t 2 - SearsTitle");
+    printf("\n\t 3 - Code");
+    printf("\n\t 4 - Designer ou Programmer");
+    printf("\n\t 5 - Ano");
+    printf("\n\t 6 - Genero");
+    printf("\n\t 7 - Notes");
+    printf("\n\t 8 - Capa");
+    printf("\n\t 9 - Imagem");
 }

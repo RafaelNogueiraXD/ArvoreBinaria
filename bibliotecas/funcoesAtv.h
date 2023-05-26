@@ -1,7 +1,7 @@
 No* buscarNo(No* raiz, char* chave) {
     if (raiz == NULL || strcmp(chave, raiz->chave) == 0) {
         return raiz;
-    }\
+    }
     if (strcmp(chave, raiz->chave) < 0) {
         return buscarNo(raiz->esquerda, chave);
     } else {
@@ -19,30 +19,7 @@ void mostraBusca(No* raiz){
     printf("Imagem de Capa: %s\n", raiz->capa);
     printf("Imagem do Jogo: %s\n",raiz->imagem);
 }
-// No* inserirNo2(No* raiz, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes) {
-//     if (raiz == NULL) {
-//         No* novoNo = (No*)malloc(sizeof(No));
-//         novoNo->chave = strdup(chave);
-//         novoNo->searsTitle = strdup(searsTitle);
-//         novoNo->code = strdup(code);
-//         novoNo->designerOrProgrammer = strdup(designerOrProgrammer);
-//         novoNo->year = strdup(year);
-//         novoNo->genre = strdup(genre);
-//         novoNo->notes = strdup(notes);
-//         novoNo->esquerda = NULL;
-//         novoNo->direita = NULL;
-//         return novoNo;
-//     }
 
-//     int comparacao = strcmp(chave, raiz->chave);
-//     if (comparacao < 0) {
-//         raiz->esquerda = inserirNo2(raiz->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
-//     } else if (comparacao > 0) {
-//         raiz->direita = inserirNo2(raiz->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes);
-//     }
-
-//     return raiz;
-// }
 No* encontrarMinimo(No* raiz) {
     if (raiz->esquerda == NULL) {
         return raiz;
@@ -150,9 +127,9 @@ void atualizarDados(No* raiz, char* chave) {
         strcpy(novoNotes,obterChar("Notes", 100));
         strcpy(novaCapa,obterChar("Link Capa",4));
         strcpy(novaImagem,obterChar("Link Imagem", 4));
+
         free(raiz->searsTitle);
         raiz->searsTitle = strdup(novoSearsTitle);
-
         free(raiz->code);
         raiz->code = strdup(novoCode);
 
