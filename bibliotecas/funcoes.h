@@ -238,3 +238,11 @@ void menuBuscas(){
     printf("\n\t 8 - Capa");
     printf("\n\t 9 - Imagem");
 }
+void limpaTela(){
+    #ifdef __linux__
+        system("clear");
+    #elif _WIN32
+        system("cls");
+    #else
+    #endif
+}

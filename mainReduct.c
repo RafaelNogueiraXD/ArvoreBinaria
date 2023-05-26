@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "bibliotecas/funcoes.h"
 #include "bibliotecas/funcoesAtv.h"
 #include "bibliotecas/busca.h"
@@ -15,6 +16,7 @@ int main() {
         return 1;
     }
     do{
+        limpaTela();
         menu();
         printf("\n\t escolha: "); 
         scanf("%d", &opcao);
@@ -65,8 +67,11 @@ int main() {
             printf("\nOpcao invalida!\n");
             break;
         }
+        if(opcao != 0){
+            printf("\n\t\tPrecissone Enter para continuar !");
+            getchar();
+        }
     } while (opcao != 0);
-
     liberarArvore(raiz);
     liberarMemoria(VetorNomes, total);
 
