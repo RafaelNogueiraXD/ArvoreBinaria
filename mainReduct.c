@@ -8,7 +8,7 @@ int main() {
     jogo* raiz = NULL;
     char** VetorNomes = NULL;
     int total = 0, opcao;
-    char caracter[MAX_TAM_NOME];
+    char caracter[MAX_TAM_NOME], op[MAX_TAM_NOME];
     raiz = lerArquivo2("../dados/arquivo.csv", &VetorNomes, &total);
     if (raiz == NULL) {
         liberarMemoria(VetorNomes, total);
@@ -37,8 +37,16 @@ int main() {
             break;
         case 4:
             strcpy(caracter,obterChar("nome",1));
-            if (buscarJogo(raiz, caracter) != NULL)
-                mostraBusca(buscarJogo(raiz, caracter));
+            jogo *aux = buscarJogo(raiz, caracter);
+            if (aux != NULL){
+                mostraBusca(aux);
+                printf("Deseja abrir as imagens do jogo? (1 - sim/ 2 - nao)");
+                scanf("%d", &opcao);
+                if(opcao == 1){
+                    abrirImagem(aux->capa);
+                    abrirImagem(aux->imagem);
+                }
+            }
             else{ 
                 printf("\nAqui esta uma lista do que voce quis dizer: \n");
                 printf("Valores encontrados: %d", buscaPrefixo(raiz, caracter, 0));

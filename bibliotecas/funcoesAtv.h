@@ -181,3 +181,18 @@ void addImagens(jogo* raiz, char* chave) {
         addImagens(raiz->direita, chave);
     }
 }
+void abrirImagem(char *string){
+    char* str_path_e_nome_da_imagem = string;
+    char* str_arg = (char*)malloc(256);
+    
+    #ifdef _WIN32 // Verificar se está executando no Windows
+        strcpy(str_arg, "explorer "); // No Windows: abrir arquivo com o programa padrão
+    #else
+        strcpy(str_arg, "xdg-open "); // No Linux: abrir arquivo com o programa padrão
+    #endif
+    
+    strcat(str_arg, str_path_e_nome_da_imagem);
+    system(str_arg);
+    
+    free(str_arg);
+}
