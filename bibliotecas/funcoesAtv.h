@@ -1,14 +1,14 @@
-No* buscarNo(No* raiz, char* chave) {
+jogo* buscarJogo(jogo* raiz, char* chave) {
     if (raiz == NULL || strcmp(chave, raiz->chave) == 0) {
         return raiz;
     }
     if (strcmp(chave, raiz->chave) < 0) {
-        return buscarNo(raiz->esquerda, chave);
+        return buscarJogo(raiz->esquerda, chave);
     } else {
-        return buscarNo(raiz->direita, chave);
+        return buscarJogo(raiz->direita, chave);
     }
 }
-void mostraBusca(No* raiz){
+void mostraBusca(jogo* raiz){
     printf("Chave: %s\n", raiz->chave);
     printf("Sears Title: %s\n", raiz->searsTitle);
     printf("Code: %s\n", raiz->code);
@@ -20,30 +20,27 @@ void mostraBusca(No* raiz){
     printf("Imagem do Jogo: %s\n",raiz->imagem);
 }
 
-No* encontrarMinimo(No* raiz) {
+jogo* encontrarMinimo(jogo* raiz) {
     if (raiz->esquerda == NULL) {
         return raiz;
     }
     return encontrarMinimo(raiz->esquerda);
 }
 
-// Função para remover um nó da árvore
-No* removerNo(No* raiz, char* chave) {
+jogo* removerJogo(jogo* raiz, char* chave) {
     if (raiz == NULL) {
         return NULL;
     }
 
     int comparacao = strcmp(chave, raiz->chave);
     if (comparacao < 0) {
-        raiz->esquerda = removerNo(raiz->esquerda, chave);
+        raiz->esquerda = removerJogo(raiz->esquerda, chave);
     } else if (comparacao > 0) {
-        raiz->direita = removerNo(raiz->direita, chave);
+        raiz->direita = removerJogo(raiz->direita, chave);
     } else {
-        // Caso em que encontramos o nó a ser removido
 
-        // Se o nó não tem filhos ou apenas um filho, removemos o nó diretamente
         if (raiz->esquerda == NULL) {
-            No* temp = raiz->direita;
+            jogo* temp = raiz->direita;
             free(raiz->chave);
             free(raiz->searsTitle);
             free(raiz->code);
@@ -54,7 +51,7 @@ No* removerNo(No* raiz, char* chave) {
             free(raiz);
             return temp;
         } else if (raiz->direita == NULL) {
-            No* temp = raiz->esquerda;
+            jogo* temp = raiz->esquerda;
             free(raiz->chave);
             free(raiz->searsTitle);
             free(raiz->code);
@@ -65,8 +62,7 @@ No* removerNo(No* raiz, char* chave) {
             free(raiz);
             return temp;
         } else {
-            // Caso em que o nó a ser removido possui dois filhos
-            No* minimo = encontrarMinimo(raiz->direita);
+            jogo* minimo = encontrarMinimo(raiz->direita);
             raiz->chave = strdup(minimo->chave);
             raiz->searsTitle = strdup(minimo->searsTitle);
             raiz->code = strdup(minimo->code);
@@ -74,20 +70,20 @@ No* removerNo(No* raiz, char* chave) {
             raiz->year = strdup(minimo->year);
             raiz->genre = strdup(minimo->genre);
             raiz->notes = strdup(minimo->notes);
-            raiz->direita = removerNo(raiz->direita, minimo->chave);
+            raiz->direita = removerJogo(raiz->direita, minimo->chave);
         }
     }
     return raiz;
 }
-void percorrerEmOrdemArquivo(No* raiz, FILE* arquivo) {
+void percorrerEmOrdemArquivo(jogo* raiz, FILE* arquivo) {
     if (raiz != NULL) {
         percorrerEmOrdemArquivo(raiz->esquerda, arquivo);
-        fprintf(arquivo, "%s,%s,%s,%s,%s,%s,%s\n", raiz->chave, raiz->searsTitle, raiz->code, raiz->designerOrProgrammer, raiz->year, raiz->genre, raiz->notes);
+        fprintf(arquivo, "%s,%s,%s,%s,%s,%s,%s,%s,%s\n", raiz->chave, raiz->searsTitle, raiz->code, raiz->designerOrProgrammer, raiz->year, raiz->genre, raiz->notes, raiz->capa, raiz->imagem);
         percorrerEmOrdemArquivo(raiz->direita, arquivo);
     }
 }
 
-void exportarArvoreParaCSV(No* raiz, const char* nomeArquivo) {
+void exportarArvoreParaCSV(jogo* raiz, const char* nomeArquivo) {
     FILE* arquivo = fopen(nomeArquivo, "w");
     if (arquivo == NULL) {
         printf("Erro ao criar o arquivo %s.\n", nomeArquivo);
@@ -100,7 +96,7 @@ void exportarArvoreParaCSV(No* raiz, const char* nomeArquivo) {
     printf("Arquivo %s exportado com sucesso.\n", nomeArquivo);
 }
 
-void atualizarDados(No* raiz, char* chave) {
+void atualizarDados(jogo* raiz, char* chave) {
     char novoSearsTitle[MAX_TAM_NOME];
     char novoCode[MAX_TAM_NOME];
     char novoDesignerOrProgrammer[MAX_TAM_NOME];
@@ -111,13 +107,12 @@ void atualizarDados(No* raiz, char* chave) {
     char novaImagem[MAX_TAM_NOME];
 
     if (raiz == NULL) {
-        printf("A chave fornecida nao foi encontrada na arvore.\n");
+        printf("O nome fornecido nao foi encontrado na base de dados.\n");
         return;
     }
 
     int comparacao = strcmp(chave, raiz->chave);
     if (comparacao == 0) {
-        // Atualizar os dados do nó
         printf("\n\tDado encontrado, digite as novas informacoes:");
         strcpy(novoSearsTitle, obterChar("Titulo",1));
         strcpy(novoCode,obterChar("Codigo",1));
@@ -151,10 +146,38 @@ void atualizarDados(No* raiz, char* chave) {
         free(raiz->imagem);
         raiz->imagem = strdup(novaImagem);
 
-        printf("Dados atualizados com sucesso para a chave: %s\n", chave);
+        printf("Dados atualizados de: %s\n", chave);
     } else if (comparacao < 0) {
         atualizarDados(raiz->esquerda, chave);
     } else {
         atualizarDados(raiz->direita, chave);
+    }
+}
+void addImagens(jogo* raiz, char* chave) {
+    char novaCapa[MAX_TAM_NOME];
+    char novaImagem[MAX_TAM_NOME];
+
+    if (raiz == NULL) {
+        printf("O nome fornecido nao foi encontrado na base de dados.\n");
+        return;
+    }
+
+    int comparacao = strcmp(chave, raiz->chave);
+    if (comparacao == 0) {
+        printf("\n\tDado encontrado, digite as imagens:");
+        strcpy(novaCapa,obterChar("Link Capa",4));
+        strcpy(novaImagem,obterChar("Link Imagem", 4));
+
+        free(raiz->capa);
+        raiz->capa = strdup(novaCapa);
+
+        free(raiz->imagem);
+        raiz->imagem = strdup(novaImagem);
+
+        printf("Dados atualizados de: %s\n", chave);
+    } else if (comparacao < 0) {
+        addImagens(raiz->esquerda, chave);
+    } else {
+        addImagens(raiz->direita, chave);
     }
 }

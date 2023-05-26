@@ -1,4 +1,4 @@
-No* buscas(No* raiz, char* nomeCampo, int categoria) {
+jogo* buscas(jogo* raiz, char* nomeCampo, int categoria) {
     if (raiz == NULL) {
         return NULL;
     }

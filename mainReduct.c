@@ -5,11 +5,11 @@
 #include "bibliotecas/funcoesAtv.h"
 #include "bibliotecas/busca.h"
 int main() {
-    No* raiz = NULL;
+    jogo* raiz = NULL;
     char** VetorNomes = NULL;
-    int total = 0, opcao, buscaOp;
+    int total = 0, opcao;
     char caracter[MAX_TAM_NOME];
-    raiz = lerArquivo2("../dados/dataBase44444.csv", &VetorNomes, &total);
+    raiz = lerArquivo2("../dados/arquivo.csv", &VetorNomes, &total);
     if (raiz == NULL) {
         liberarMemoria(VetorNomes, total);
         return 1;
@@ -18,14 +18,14 @@ int main() {
         menu();
         printf("\n\t escolha: "); 
         scanf("%d", &opcao);
-        getchar(); // Limpar o caractere de nova linha deixado por scanf
+        getchar(); 
         switch (opcao) {
         case 0:
             printf("\nFechando programa.\n");
             break;
         case 1: 
             printf("\n\n Informe os dados do jogo: ");
-            inserirNo(raiz, obterChar("nome",1), obterChar("title",1), obterChar("code",1), obterChar("Designer ou programador",1), obterChar("Ano",1), obterChar("Genero",1), obterChar("Notes",10), obterChar("link",4), obterChar("link",4));
+            inserirJogo(raiz, obterChar("nome",1), obterChar("title",1), obterChar("code",1), obterChar("Designer ou programador",1), obterChar("Ano",1), obterChar("Genero",1), obterChar("Notes",10), obterChar("link",4), obterChar("link",4));
             break;        
         case 2:
             atualizarDados(raiz, obterChar("nome",1));
@@ -33,12 +33,12 @@ int main() {
         case 3:
             strcpy(caracter,obterChar("nome",1));
 
-            removerNo(raiz, caracter);
+            removerJogo(raiz, caracter);
             break;
         case 4:
             strcpy(caracter,obterChar("nome",1));
-            if (buscarNo(raiz, caracter) != NULL)
-                mostraBusca(buscarNo(raiz, caracter));
+            if (buscarJogo(raiz, caracter) != NULL)
+                mostraBusca(buscarJogo(raiz, caracter));
             else{ 
                 printf("\nAqui esta uma lista do que voce quis dizer: \n");
                 printf("Valores encontrados: %d", buscaPrefixo(raiz, caracter, 0));
@@ -50,6 +50,9 @@ int main() {
         case 6:
             exportarArvoreParaCSV(raiz, "../dados/arquivo.csv");
             break;
+        case 7:
+            addImagens(raiz,obterChar("nome",1));
+        break;
         default:
             printf("\nOpcao invalida!\n");
             break;
