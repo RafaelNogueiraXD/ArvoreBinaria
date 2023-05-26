@@ -48,7 +48,7 @@ int main() {
             percorrerEmOrdem(raiz);
             break;
         case 6:
-            exportarArvoreParaCSV(raiz, "../dados/arquivo.csv");
+            exportarArvoreParaCSV(raiz, "../dados/customizado.csv");
             break;
         case 7:
             addImagens(raiz,obterChar("nome",1));
