@@ -3,17 +3,19 @@ https://github.com/RafaelNogueiraXD/ArvoreBinaria
 Informações:
 Este trabalho foi divido em 4 arquivos.
     1   - "mainReduct.c", é a função main, executará aplicação e chamada as funções
-    2   - "dados" esta pasta esta o dataSet original e o Customizado, o Customizado possui as imagens
+    2   - "dados" nesta pasta esta o dataSet original e o Customizado, o Customizado possui as imagens.(pode haver dados confusos)
     3   - "bibliotecas", esta divido em 3 arquivos: 
             "funcoes.c" - tem funções bases que auxiliam no funcionamento, mas não estão ligadas diretamente com que foi pedido na atividade
             "funcoesAtv.c" - tem funções que estão ligadas diretamente com que foi pedido na atividade
             "busca.c" - tem a função de busca de todos os campos. porém na aula do dia 22/05, foi dito pelo professor que não era necessário,
             logo deixei o arquivo e a função, mas apenas uma parte da função será usada ao executar o "mainReduct.c"
 
-Os jogos que tem imagens são (os jogos que não possuem imagem eu deixei por padrão a imagem do Amidar): 
+Os jogos que tem imagens são: 
     Obelix
     Hangman
     Kung-Fu Master
     Miner 2049er
     Amidar
+IMPORTANTE: os jogos que não possuem imagem eu atribui as imagens dos outros jogos que tem.
+IMPORTANTE: para visualizar a imagem é necessário procrurar por ela na aba de busca, a busca também pode ser feita por Prefixo, para ajudar o usuário.
 Obs: se por acaso você, usario for usar um csv diferente passe ele como tratamento pelos arquivos python, para que não haja erros ao executar o programa.

@@ -45,3 +45,15 @@ jogo* buscas(jogo* raiz, char* nomeCampo, int categoria) {
         return buscas(raiz->direita, nomeCampo, categoria);
     }
 }
+void removerVazios(jogo** arvore) {
+    printf("tentando remover o vazio:  ");
+    char caracter[4]; // Certifique-se de ter espaço suficiente para armazenar o prefixo
+    strcpy(caracter, "vaz");
+    jogo* aux2 = buscaPrefixoNo(*arvore, caracter, 0);
+    while (aux2 != NULL) {
+        printf("tentando achar e remover. . .");
+        *arvore = removerJogo(*arvore, aux2->chave);
+        // Atualize o valor de caracter para um novo prefixo
+        aux2 = buscaPrefixoNo(*arvore, caracter, 0);
+    }
+}

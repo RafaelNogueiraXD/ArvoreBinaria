@@ -1,4 +1,5 @@
 import csv
+
 def juntar_linhas_vazias(arquivo_entrada, arquivo_saida):
     with open(arquivo_entrada, 'r', encoding='utf-8') as arquivo_entrada, open(arquivo_saida, 'w', newline='', encoding='utf-8') as arquivo_saida:
         leitor_csv = csv.reader(arquivo_entrada)
@@ -20,6 +21,7 @@ def juntar_linhas_vazias(arquivo_entrada, arquivo_saida):
                     linha_atual[j] = linha_anterior[j]
 
         escritor_csv.writerows(linhas)
+
 def adicionar_espaco_entre_virgulas(arquivo_entrada, arquivo_saida):
     with open(arquivo_entrada, 'r', encoding='utf-8') as arquivo_entrada, open(arquivo_saida, 'w', newline='', encoding='utf-8') as arquivo_saida:
         leitor_csv = csv.reader(arquivo_entrada)
@@ -36,9 +38,20 @@ def adicionar_espaco_entre_virgulas(arquivo_entrada, arquivo_saida):
             linhas.append(nova_linha)
 
         escritor_csv.writerows(linhas)
+
+def remove_linhas_vazias(arquivo_entrada, arquivo_saida):
+    with open(arquivo_entrada, 'r', encoding='utf-8') as arquivo_entrada, open(arquivo_saida, 'w', newline='', encoding='utf-8') as arquivo_saida:
+        leitor_csv = csv.reader(arquivo_entrada)
+        escritor_csv = csv.writer(arquivo_saida)
+
+        for linha in leitor_csv:
+            if len(linha) > 0 and not linha[0].startswith(",Vazio"):
+                escritor_csv.writerow(linha)
+
 # Exemplo de uso
 arquivo_entrada = '../customizado3.csv'
 arquivo_saida = 'novo.csv'
 
 adicionar_espaco_entre_virgulas(arquivo_entrada, arquivo_saida)
 juntar_linhas_vazias(arquivo_entrada, arquivo_saida)
+remove_linhas_vazias(arquivo_saida, 'final.csv')

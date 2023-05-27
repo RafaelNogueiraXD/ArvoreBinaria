@@ -139,11 +139,13 @@ jogo* lerArquivo2(char* nomeArquivo, char*** VetorNomes, int* total) {
 
         // if (strcmp(coluna[0], "Acid Drop") == 0 && strcmp(nomeArquivo, "../dados/customizado.csv") != 0)
         //     troca = 1;
-        
-        if (troca == 0)
-            arvore = inserirJogo(arvore, coluna[0], coluna[1], coluna[2], coluna[3], coluna[4], coluna[5], coluna[6], coluna[7], coluna[8]);
-        else
-            arvore = inserirJogo(arvore, coluna[0], "Vazio", "Vazio", coluna[1], coluna[3], coluna[4], coluna[5], "vazio", "vazio");
+        if(strcmp(coluna[0], "vazio") == 0 || strcmp(coluna[0], "Vazio") == 0)continue;
+        else{
+            if (troca == 0)
+                arvore = inserirJogo(arvore, coluna[0], coluna[1], coluna[2], coluna[3], coluna[4], coluna[5], coluna[6], coluna[7], coluna[8]);
+            else
+                arvore = inserirJogo(arvore, coluna[0], "Vazio", "Vazio", coluna[1], coluna[3], coluna[4], coluna[5], "vazio", "vazio");
+        }
     }
 
     fclose(file);
@@ -207,6 +209,23 @@ int buscaPrefixo(jogo* arvore, char prefixo[], int achado) {
     }
     return achado;
 }
+jogo* buscaPrefixoNo(jogo* arvore, char prefixo[], int achado) {
+    if (arvore == NULL) {
+        return NULL;
+    }
+    int comparacao = strncmp(prefixo, arvore->chave, strlen(prefixo));
+    if (comparacao == 0) {
+        return arvore;
+    }
+    if (comparacao < 0) {
+        return buscaPrefixoNo(arvore->esquerda, prefixo, achado);
+    }
+    if (comparacao > 0) {
+        return buscaPrefixoNo(arvore->direita, prefixo, achado);
+    }
+    return NULL; // Retorna NULL se o prefixo não for encontrado
+}
+
 
 
 

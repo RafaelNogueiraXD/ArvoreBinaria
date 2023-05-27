@@ -10,11 +10,13 @@ int main() {
     char** VetorNomes = NULL;
     int total = 0, opcao;
     char caracter[MAX_TAM_NOME], op[MAX_TAM_NOME];
-    arvore = lerArquivo2("../dados/arquivo.csv", &VetorNomes, &total);
+    arvore = lerArquivo2("../dados/customizado.csv", &VetorNomes, &total);
     if (arvore == NULL) {
         liberarMemoria(VetorNomes, total);
         return 1;
     }
+    
+    removerVazios(&arvore);
     do{
         limpaTela();
         menu();
