@@ -47,47 +47,47 @@ jogo* addJogo(char* chave, char* searsTitle, char* code, char* designerOrProgram
     return novoNo;
 }
 
-jogo* inserirJogo(jogo* raiz, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes, char*capa, char *imagem) {
-    if (raiz == NULL) {
+jogo* inserirJogo(jogo* arvore, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes, char*capa, char *imagem) {
+    if (arvore == NULL) {
         return addJogo(chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
     }
 
-    int comparacao = strcmp(chave, raiz->chave);
+    int comparacao = strcmp(chave, arvore->chave);
     if (comparacao < 0) {
-        raiz->esquerda = inserirJogo(raiz->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
+        arvore->esquerda = inserirJogo(arvore->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
     } else if (comparacao > 0) {
-        raiz->direita = inserirJogo(raiz->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa , imagem);
+        arvore->direita = inserirJogo(arvore->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa , imagem);
     }
 
-    return raiz;
+    return arvore;
 }
 
-void percorrerEmOrdem(jogo* raiz) {
-    if (raiz != NULL) {
-        percorrerEmOrdem(raiz->esquerda);
-        printf("Chave: %s\n", raiz->chave);
-        printf("Sears Title: %s\n", raiz->searsTitle);
-        printf("Code: %s\n", raiz->code);
-        printf("Designer or Programmer: %s\n", raiz->designerOrProgrammer);
-        printf("Year: %s\n", raiz->year);
-        printf("Genre: %s\n", raiz->genre);
-        printf("Notes: %s\n\n", raiz->notes);
-        percorrerEmOrdem(raiz->direita);
+void percorrerEmOrdem(jogo* arvore) {
+    if (arvore != NULL) {
+        percorrerEmOrdem(arvore->esquerda);
+        printf("Chave: %s\n", arvore->chave);
+        printf("Sears Title: %s\n", arvore->searsTitle);
+        printf("Code: %s\n", arvore->code);
+        printf("Designer or Programmer: %s\n", arvore->designerOrProgrammer);
+        printf("Year: %s\n", arvore->year);
+        printf("Genre: %s\n", arvore->genre);
+        printf("Notes: %s\n\n", arvore->notes);
+        percorrerEmOrdem(arvore->direita);
     }
 }
 
-void liberarArvore(jogo* raiz) {
-    if (raiz != NULL) {
-        liberarArvore(raiz->esquerda);
-        liberarArvore(raiz->direita);
-        free(raiz->chave);
-        free(raiz->searsTitle);
-        free(raiz->code);
-        free(raiz->designerOrProgrammer);
-        free(raiz->year);
-        free(raiz->genre);
-        free(raiz->notes);
-        free(raiz);
+void liberarArvore(jogo* arvore) {
+    if (arvore != NULL) {
+        liberarArvore(arvore->esquerda);
+        liberarArvore(arvore->direita);
+        free(arvore->chave);
+        free(arvore->searsTitle);
+        free(arvore->code);
+        free(arvore->designerOrProgrammer);
+        free(arvore->year);
+        free(arvore->genre);
+        free(arvore->notes);
+        free(arvore);
     }
 }
 void menu(){
@@ -109,43 +109,45 @@ jogo* lerArquivo2(char* nomeArquivo, char*** VetorNomes, int* total) {
     }
     printf("\nAchamos o arquivo %s!\n", nomeArquivo);
 
-    jogo* raiz = NULL;
+    jogo* arvore = NULL;
     char line[MAX_LINE_LENGTH];
     char *token;
-    char *columns[MAX_COLUMNS];
-    int columnCount = 0;
+    char *coluna[MAX_COLUMNS];
+    int contador = 0;
     int troca = 0;
 
     while (fgets(line, sizeof(line), file) != NULL) {
         token = strtok(line, ",");
-        columnCount = 0;
-
-        while (token != NULL && columnCount < MAX_COLUMNS) {
-            columns[columnCount] = token;
-            columnCount++;
+        contador = 0;
+        if (token == NULL) {
+            continue; // Pular para a próxima iteração do loop externo
+        }
+        while (token != NULL && contador < MAX_COLUMNS) {
+            coluna[contador] = token;
+            contador++;
             token = strtok(NULL, ",");
         }
 
         *VetorNomes = realloc(*VetorNomes, (*total + 1) * sizeof(char*));
-        (*VetorNomes)[*total] = malloc(strlen(columns[0]) + 1);
-        strcpy((*VetorNomes)[*total], columns[0]);
+        (*VetorNomes)[*total] = malloc(strlen(coluna[0]) + 1);
+        strcpy((*VetorNomes)[*total], coluna[0]);
         (*total)++;
 
-        for (int i = columnCount; i < MAX_COLUMNS; i++) {
-            columns[i] = "vazio";
+        for (int i = contador; i < MAX_COLUMNS; i++) {
+            coluna[i] = "vazio";
         }
 
-        if (strcmp(columns[0], "Acid Drop") == 0 && strcmp(nomeArquivo, "../dados/arquivo.csv") != 0)
-            troca = 1;
-
+        // if (strcmp(coluna[0], "Acid Drop") == 0 && strcmp(nomeArquivo, "../dados/customizado.csv") != 0)
+        //     troca = 1;
+        
         if (troca == 0)
-            raiz = inserirJogo(raiz, columns[0], columns[1], columns[2], columns[3], columns[4], columns[5], columns[6], columns[7], columns[8]);
+            arvore = inserirJogo(arvore, coluna[0], coluna[1], coluna[2], coluna[3], coluna[4], coluna[5], coluna[6], coluna[7], coluna[8]);
         else
-            raiz = inserirJogo(raiz, columns[0], "Vazio", "Vazio", columns[1], columns[3], columns[4], columns[5], "vazio", "vazio");
+            arvore = inserirJogo(arvore, coluna[0], "Vazio", "Vazio", coluna[1], coluna[3], coluna[4], coluna[5], "vazio", "vazio");
     }
 
     fclose(file);
-    return raiz;
+    return arvore;
 }
 
 jogo* lerArquivo(char* nomeArquivo, char*** VetorNomes, int* total) {
@@ -156,52 +158,52 @@ jogo* lerArquivo(char* nomeArquivo, char*** VetorNomes, int* total) {
     }
     printf("\n Achamos o arquivo!\n");
 
-    jogo* raiz = NULL;
+    jogo* arvore = NULL;
     char line[MAX_LINE_LENGTH];
     char *token;
-    char *columns[MAX_COLUMNS];
-    int columnCount = 0;
+    char *coluna[MAX_COLUMNS];
+    int contador = 0;
     int troca = 0;
 
     while (fgets(line, sizeof(line), file) != NULL) {
         token = strtok(line, ",");
-        columnCount = 0;
+        contador = 0;
 
-        while (token != NULL && columnCount < MAX_COLUMNS) {
-            columns[columnCount] = token;
-            columnCount++;
+        while (token != NULL && contador < MAX_COLUMNS) {
+            coluna[contador] = token;
+            contador++;
             token = strtok(NULL, ",");
         }
 
         *VetorNomes = realloc(*VetorNomes, (*total + 1) * sizeof(char*));
-        (*VetorNomes)[*total] = malloc(strlen(columns[0]) + 1);
-        strcpy((*VetorNomes)[*total], columns[0]);
+        (*VetorNomes)[*total] = malloc(strlen(coluna[0]) + 1);
+        strcpy((*VetorNomes)[*total], coluna[0]);
         (*total)++;
-        if (strcmp(columns[0], "Acid Drop") == 0)
+        if (strcmp(coluna[0], "Acid Drop") == 0)
             troca = 1;
         if (troca == 0)
-            raiz = inserirJogo(raiz, columns[0], columns[1], columns[2], columns[3], columns[4], columns[5], columns[6], "vazio", "vazio");
+            arvore = inserirJogo(arvore, coluna[0], coluna[1], coluna[2], coluna[3], coluna[4], coluna[5], coluna[6], "vazio", "vazio");
         else
-            raiz = inserirJogo(raiz, columns[0], "Vazio", "Vazio", columns[1], columns[3], columns[4], columns[5], "vazio", "vazio");
+            arvore = inserirJogo(arvore, coluna[0], "Vazio", "Vazio", coluna[1], coluna[3], coluna[4], coluna[5], "vazio", "vazio");
     }
 
     fclose(file);
-    return raiz;
+    return arvore;
 }
-int buscaPrefixo(jogo* raiz, char prefixo[], int achado) {
-    if (raiz == NULL) {
+int buscaPrefixo(jogo* arvore, char prefixo[], int achado) {
+    if (arvore == NULL) {
         return achado;
     }
-    int comparacao = strncmp(prefixo, raiz->chave, strlen(prefixo));
+    int comparacao = strncmp(prefixo, arvore->chave, strlen(prefixo));
     if (comparacao == 0) {
-        printf("%s\n", raiz->chave);
+        printf("%s\n", arvore->chave);
         achado++;
     }
     if (comparacao <= 0) {
-        achado = buscaPrefixo(raiz->esquerda, prefixo, achado);
+        achado = buscaPrefixo(arvore->esquerda, prefixo, achado);
     }
     if (comparacao >= 0) {
-        achado = buscaPrefixo(raiz->direita, prefixo, achado);
+        achado = buscaPrefixo(arvore->direita, prefixo, achado);
     }
     return achado;
 }
