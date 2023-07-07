@@ -1,21 +1,16 @@
 caso não consiga abrir tem o link no github:
 https://github.com/RafaelNogueiraXD/ArvoreBinaria
 Informações:
-Este trabalho foi divido em 4 arquivos.
-    1   - "mainReduct.c", é a função main, executará aplicação e chamada as funções
-    2   - "dados" nesta pasta esta o dataSet original e o Customizado, o Customizado possui as imagens.(pode haver dados confusos)
-    3   - "bibliotecas", esta divido em 3 arquivos: 
-            "funcoes.c" - tem funções bases que auxiliam no funcionamento, mas não estão ligadas diretamente com que foi pedido na atividade
-            "funcoesAtv.c" - tem funções que estão ligadas diretamente com que foi pedido na atividade
-            "busca.c" - tem a função de busca de todos os campos. porém na aula do dia 22/05, foi dito pelo professor que não era necessário,
-            logo deixei o arquivo e a função, mas apenas uma parte da função será usada ao executar o "mainReduct.c"
+    Diferente do envio da prova 1, foram feitas algumas alterações em relação aos arquivos.
+    1 - foi criado um arquivo chamado "execute.sh" ele executará o arquivo main.c para que não haja problemas na hora da execução do programa.
+    2 - criada a pasta "main" nela está o "main.c" e seu executavel
+    3 - na pasta dados foram mantidos os mesmos
+    4 - Em relação a pasta bibliotecas:
+        4.1 - as alterações foram todas no arquivo  "funcoes.h", nele está as novas funções para criação de uma arvore AVL
 
-Os jogos que tem imagens são: 
-    Obelix
-    Hangman
-    Kung-Fu Master
-    Miner 2049er
-    Amidar
-IMPORTANTE: os jogos que não possuem imagem eu atribui as imagens dos outros jogos que tem.
-IMPORTANTE: para visualizar a imagem é necessário procrurar por ela na aba de busca, a busca também pode ser feita por Prefixo, para ajudar o usuário.
-Obs: se por acaso você, usario for usar um csv diferente passe ele como tratamento pelos arquivos python, para que não haja erros ao executar o programa.
+Novas funções:
+rotaEsquerda
+rotaDireita
+max
+height
+balanceamento

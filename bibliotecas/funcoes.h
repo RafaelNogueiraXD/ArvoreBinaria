@@ -5,6 +5,7 @@
 #define MAX_LINE_SIZE 1024
 #define MAX_LINE_LENGTH 1000
 #define MAX_COLUMNS 10
+
 int comparar_nomes(const void* a, const void* b) {  
     const char** nome1 = (const char**)a;
     const char** nome2 = (const char**)b;
@@ -16,7 +17,6 @@ void lerNomes(char nomes[MAX_NOMES][MAX_TAM_NOME], int *quantidade, char *nome) 
         (*quantidade)++;
     }
 }
-
 typedef struct jogo {
     char* chave;
     char* searsTitle;   
@@ -32,6 +32,14 @@ typedef struct jogo {
     struct jogo* direita;
 } jogo;
 
+typedef struct{
+        jogo* arvore;
+}Container;
+Container *alocaContainer(){
+    Container *container = (Container*) malloc(sizeof(Container));
+    container->arvore = NULL;
+    return container;
+}
 jogo* addJogo(char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes, char* capa, char * imagem) {
     jogo* novoNo = (jogo*)malloc(sizeof(jogo));
     novoNo->chave = strdup(chave);
@@ -51,22 +59,19 @@ jogo* addJogo(char* chave, char* searsTitle, char* code, char* designerOrProgram
 int max(int a, int b) {
     return (a > b) ? a : b;
 }
-// safe
 int height(jogo* node) {
     if (node == NULL) {
         return 0;
     }
     return node->height;
 }
-// safe
-int get_balance(jogo* node) {
+int balanceamento(jogo* node) {
     if (node == NULL) {
         return 0;
     }
     return height(node->esquerda) - height(node->direita);
 }
-// safe
-jogo* rotate_right(jogo* y) {
+jogo* rotaDireita(jogo* y) {
     jogo* x = y->esquerda;
     jogo* T2 = x->direita;
 
@@ -78,8 +83,7 @@ jogo* rotate_right(jogo* y) {
 
     return x;
 }
-// safe
-jogo* rotate_left(jogo* x) {
+jogo* rotaEsquerda(jogo* x) {
     jogo* y = x->direita;
     jogo* T2 = y->esquerda;
 
@@ -111,39 +115,27 @@ jogo* inserirJogo(jogo* root, char* chave, char* searsTitle, char* code, char* d
 
     root->height = 1 + max(height(root->esquerda), height(root->direita));
 
-    int balance = get_balance(root);
+    int balance = balanceamento(root);
 
     if (balance > 1 && strcmp(chave, root->esquerda->chave) < 0) {
-        return rotate_right(root);
+        return rotaDireita(root);
     }
 
     if (balance < -1 && strcmp(chave, root->direita->chave) > 0) {
-        return rotate_left(root);
+        return rotaEsquerda(root);
     }
 
     if (balance > 1 && strcmp(chave, root->esquerda->chave) > 0) {
-        root->esquerda = rotate_left(root->esquerda);
-        return rotate_right(root);
+        root->esquerda = rotaEsquerda(root->esquerda);
+        return rotaDireita(root);
     }
 
     if (balance < -1 && strcmp(chave, root->direita->chave) < 0) {
-        root->direita = rotate_right(root->direita);
-        return rotate_left(root);
+        root->direita = rotaDireita(root->direita);
+        return rotaEsquerda(root);
     }
 
     return root;
-}
-
-void inorder_traversal(jogo* root) {
-    if (root != NULL) {
-        inorder_traversal(root->esquerda);
-        if(root->esquerda != NULL)
-            printf("%s -> %s\n", root->chave, root->esquerda->chave);
-        if(root->direita != NULL)
-            printf("%s -> %s\n", root->chave, root->direita->chave);
-     
-        inorder_traversal(root->direita);
-    }
 }
 void percorrerEmOrdem(jogo* arvore) {
     if (arvore != NULL) {
