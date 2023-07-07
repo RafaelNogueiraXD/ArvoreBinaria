@@ -19,7 +19,7 @@ void lerNomes(char nomes[MAX_NOMES][MAX_TAM_NOME], int *quantidade, char *nome) 
 
 typedef struct jogo {
     char* chave;
-    char* searsTitle;
+    char* searsTitle;   
     char* code;
     char* designerOrProgrammer;
     char* year;
@@ -27,6 +27,7 @@ typedef struct jogo {
     char* notes;
     char *capa;
     char *imagem;
+    int height;
     struct jogo* esquerda;
     struct jogo* direita;
 } jogo;
@@ -42,26 +43,108 @@ jogo* addJogo(char* chave, char* searsTitle, char* code, char* designerOrProgram
     novoNo->notes = strdup(notes);
     novoNo->capa = strdup(capa);
     novoNo->imagem = strdup(imagem);
+    novoNo->height = 1;
     novoNo->esquerda = NULL;
     novoNo->direita = NULL;
     return novoNo;
 }
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+// safe
+int height(jogo* node) {
+    if (node == NULL) {
+        return 0;
+    }
+    return node->height;
+}
+// safe
+int get_balance(jogo* node) {
+    if (node == NULL) {
+        return 0;
+    }
+    return height(node->esquerda) - height(node->direita);
+}
+// safe
+jogo* rotate_right(jogo* y) {
+    jogo* x = y->esquerda;
+    jogo* T2 = x->direita;
 
-jogo* inserirJogo(jogo* arvore, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes, char*capa, char *imagem) {
-    if (arvore == NULL) {
+    x->direita = y;
+    y->esquerda = T2;
+
+    y->height = 1 + max(height(y->esquerda), height(y->direita));
+    x->height = 1 + max(height(x->esquerda), height(x->direita));
+
+    return x;
+}
+// safe
+jogo* rotate_left(jogo* x) {
+    jogo* y = x->direita;
+    jogo* T2 = y->esquerda;
+
+    y->esquerda = x;
+    x->direita = T2;
+
+    x->height = 1 + max(height(x->esquerda), height(x->direita));
+    y->height = 1 + max(height(y->esquerda), height(y->direita));
+
+    return y;
+}
+
+jogo* inserirJogo(jogo* root, char* chave, char* searsTitle, char* code, char* designerOrProgrammer, char* year, char* genre, char* notes, char* capa, char* imagem) {
+    if (root == NULL) {
         return addJogo(chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
     }
 
-    int comparacao = strcmp(chave, arvore->chave);
-    if (comparacao < 0) {
-        arvore->esquerda = inserirJogo(arvore->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
-    } else if (comparacao > 0) {
-        arvore->direita = inserirJogo(arvore->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa , imagem);
+    int cmp = strcmp(chave, root->chave);
+
+    if (cmp < 0) {
+        root->esquerda = inserirJogo(root->esquerda, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
+    }
+    else if (cmp > 0) {
+        root->direita = inserirJogo(root->direita, chave, searsTitle, code, designerOrProgrammer, year, genre, notes, capa, imagem);
+    }
+    else {
+        return root;
     }
 
-    return arvore;
+    root->height = 1 + max(height(root->esquerda), height(root->direita));
+
+    int balance = get_balance(root);
+
+    if (balance > 1 && strcmp(chave, root->esquerda->chave) < 0) {
+        return rotate_right(root);
+    }
+
+    if (balance < -1 && strcmp(chave, root->direita->chave) > 0) {
+        return rotate_left(root);
+    }
+
+    if (balance > 1 && strcmp(chave, root->esquerda->chave) > 0) {
+        root->esquerda = rotate_left(root->esquerda);
+        return rotate_right(root);
+    }
+
+    if (balance < -1 && strcmp(chave, root->direita->chave) < 0) {
+        root->direita = rotate_right(root->direita);
+        return rotate_left(root);
+    }
+
+    return root;
 }
 
+void inorder_traversal(jogo* root) {
+    if (root != NULL) {
+        inorder_traversal(root->esquerda);
+        if(root->esquerda != NULL)
+            printf("%s -> %s\n", root->chave, root->esquerda->chave);
+        if(root->direita != NULL)
+            printf("%s -> %s\n", root->chave, root->direita->chave);
+     
+        inorder_traversal(root->direita);
+    }
+}
 void percorrerEmOrdem(jogo* arvore) {
     if (arvore != NULL) {
         percorrerEmOrdem(arvore->esquerda);
@@ -86,6 +169,8 @@ void liberarArvore(jogo* arvore) {
         free(arvore->designerOrProgrammer);
         free(arvore->year);
         free(arvore->genre);
+        free(arvore->capa);
+        free(arvore->imagem);
         free(arvore->notes);
         free(arvore);
     }
