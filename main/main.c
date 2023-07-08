@@ -30,6 +30,8 @@ void printLevelOrder(jogo* root) {
     char color[100];
 
     printf("Nível 1: ");
+    strcpy(color,"red");  
+
     queue[rear++] = root;
     fprintf(arq,"\n node [style=filled];\n");
         
@@ -42,15 +44,6 @@ void printLevelOrder(jogo* root) {
     while (front < rear) {
         jogo* current = queue[front++];
         printf("%s ", current->chave);
-        switch (levelCount)
-        {
-        case 1:
-            strcpy(arq,"red");  
-            break;
-        
-        default:
-            break;
-        }
         fprintf(arq,"%s [filled=%s]", current->chave, color);
         currentLevelCount--;
 
@@ -75,7 +68,8 @@ void printLevelOrder(jogo* root) {
                 if(levelCount == 5)strcpy(color, "green");
                 if(levelCount == 6)strcpy(color, "blue");
                 if(levelCount == 7)strcpy(color, "pink");
-                if(levelCount == 8)strcpy(color, "");
+                if(levelCount == 8)strcpy(color, "orange");
+                if(levelCount > 9)strcpy(color,  "grey");
             }
         }
     }
