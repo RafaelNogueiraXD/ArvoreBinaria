@@ -5,22 +5,38 @@
 #include "../bibliotecas/funcoes.h"
 #include "../bibliotecas/funcoesAtv.h"
 #include "../bibliotecas/busca.h"
-void imprimiGraphviz(jogo* root){
-    FILE *arq = fopen("graph.txt","a");
-    if (root->direita != NULL){
-        fprintf(arq," %s -> %s \n", root->chave, root->direita->chave);
+void imprimiGraphviz(jogo* root) {
+    FILE* arq = fopen("../dados/graph.txt", "a");
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+
+    if (root->direita != NULL) {
+        printf(" %s -> %s \n", root->chave, root->direita->chave);
+        fprintf(arq, " \"%s\" -> \"%s\" \n", root->chave, root->direita->chave);
         imprimiGraphviz(root->direita);
     }
-    if (root->esquerda != NULL){
-        fprintf(arq," %s -> %s \n", root->chave, root->esquerda->chave);
+    if (root->esquerda != NULL) {
+        printf(" %s -> %s \n", root->chave, root->esquerda->chave);
+        fprintf(arq, " \"%s\" -> \"%s\" \n", root->chave, root->esquerda->chave);
         imprimiGraphviz(root->esquerda);
-    }  
+    }
+
+    // fprintf(arq, " \"%s\" [label=\"%s\"]\n", root->chave, root->chave);
+    fclose(arq);
 }
-void printLevelOrder(jogo* root) {
+void colorindo(jogo* root) {
     if (root == NULL) {
         return;
     }
-    FILE *arq = fopen("graph.txt","w");
+
+    FILE* arq = fopen("../dados/graph.txt", "w");
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+
     jogo** queue = (jogo**)malloc(100 * sizeof(jogo*));
     int front = 0;
     int rear = 0;
@@ -29,22 +45,16 @@ void printLevelOrder(jogo* root) {
     int nextLevelCount = 0;
     char color[100];
 
-    printf("Nível 1: ");
-    strcpy(color,"red");  
+    fprintf(arq, "node [style=filled];\n");
+
+    strcpy(color, "red");
 
     queue[rear++] = root;
-    fprintf(arq,"\n node [style=filled];\n");
-        
-
-    // A [fillcolor=red];
-    // B [fillcolor=green];
-    // C [fillcolor=blue];
-    // D [fillcolor=yellow];
 
     while (front < rear) {
         jogo* current = queue[front++];
         printf("%s ", current->chave);
-        fprintf(arq,"%s [filled=%s]", current->chave, color);
+        fprintf(arq, "\"%s\" [fillcolor=%s]\n", current->chave, color);
         currentLevelCount--;
 
         if (current->esquerda != NULL) {
@@ -60,22 +70,32 @@ void printLevelOrder(jogo* root) {
             levelCount++;
             currentLevelCount = nextLevelCount;
             nextLevelCount = 0;
+
             if (currentLevelCount > 0) {
                 printf("\nNível %d: ", levelCount + 1);
-                if(levelCount == 2)strcpy(color, "red");
-                if(levelCount == 3)strcpy(color, "yellow");
-                if(levelCount == 4)strcpy(color, "purple");
-                if(levelCount == 5)strcpy(color, "green");
-                if(levelCount == 6)strcpy(color, "blue");
-                if(levelCount == 7)strcpy(color, "pink");
-                if(levelCount == 8)strcpy(color, "orange");
-                if(levelCount > 9)strcpy(color,  "grey");
+                if (levelCount == 2)
+                    strcpy(color, "cian");
+                else if (levelCount == 3)
+                    strcpy(color, "yellow");
+                else if (levelCount == 4)
+                    strcpy(color, "purple");
+                else if (levelCount == 5)
+                    strcpy(color, "green");
+                else if (levelCount == 6)
+                    strcpy(color, "blue");
+                else if (levelCount == 7)
+                    strcpy(color, "pink");
+                else if (levelCount == 8)
+                    strcpy(color, "orange");
+                else if (levelCount > 9)
+                    strcpy(color, "grey");
             }
         }
     }
 
     printf("\n");
 
+    fclose(arq);
     free(queue);
 }
 int main() {
@@ -139,8 +159,8 @@ int main() {
             addImagens(container->arvore,obterChar("nome",1));
         break;
         case 8:
+            colorindo(container->arvore);
             imprimiGraphviz(container->arvore);
-            printLevelOrder(container->arvore);
         break;
         default:
             printf("\nOpcao invalida!\n");

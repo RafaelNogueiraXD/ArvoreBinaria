@@ -177,6 +177,7 @@ void menu(){
     printf("\n\t 5 - Vizualizar todos os itens item");
     printf("\n\t 6 - exportar informacoes");
     printf("\n\t 7 - adicionar imagem");
+    printf("\n\t 8 - exportar para graphviz");
 }
 jogo* lerArquivo2(char* nomeArquivo, char*** VetorNomes, int* total) {
     FILE* file = fopen(nomeArquivo, "r");

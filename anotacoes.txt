@@ -9,6 +9,7 @@ Informações:
         4.1 - as alterações foram todas no arquivo  "funcoes.h", nele está as novas funções para criação de uma arvore AVL
 
 Novas funções:
+imprimiGraphviz
 rotaEsquerda
 rotaDireita
 max
