@@ -5,7 +5,85 @@
 #include "../bibliotecas/funcoes.h"
 #include "../bibliotecas/funcoesAtv.h"
 #include "../bibliotecas/busca.h"
+void imprimiGraphviz(jogo* root){
+    FILE *arq = fopen("graph.txt","a");
+    if (root->direita != NULL){
+        fprintf(arq," %s -> %s \n", root->chave, root->direita->chave);
+        imprimiGraphviz(root->direita);
+    }
+    if (root->esquerda != NULL){
+        fprintf(arq," %s -> %s \n", root->chave, root->esquerda->chave);
+        imprimiGraphviz(root->esquerda);
+    }  
+}
+void printLevelOrder(jogo* root) {
+    if (root == NULL) {
+        return;
+    }
+    FILE *arq = fopen("graph.txt","w");
+    jogo** queue = (jogo**)malloc(100 * sizeof(jogo*));
+    int front = 0;
+    int rear = 0;
+    int levelCount = 0;
+    int currentLevelCount = 1;
+    int nextLevelCount = 0;
+    char color[100];
 
+    printf("Nível 1: ");
+    queue[rear++] = root;
+    fprintf(arq,"\n node [style=filled];\n");
+        
+
+    // A [fillcolor=red];
+    // B [fillcolor=green];
+    // C [fillcolor=blue];
+    // D [fillcolor=yellow];
+
+    while (front < rear) {
+        jogo* current = queue[front++];
+        printf("%s ", current->chave);
+        switch (levelCount)
+        {
+        case 1:
+            strcpy(arq,"red");  
+            break;
+        
+        default:
+            break;
+        }
+        fprintf(arq,"%s [filled=%s]", current->chave, color);
+        currentLevelCount--;
+
+        if (current->esquerda != NULL) {
+            queue[rear++] = current->esquerda;
+            nextLevelCount++;
+        }
+        if (current->direita != NULL) {
+            queue[rear++] = current->direita;
+            nextLevelCount++;
+        }
+
+        if (currentLevelCount == 0) {
+            levelCount++;
+            currentLevelCount = nextLevelCount;
+            nextLevelCount = 0;
+            if (currentLevelCount > 0) {
+                printf("\nNível %d: ", levelCount + 1);
+                if(levelCount == 2)strcpy(color, "red");
+                if(levelCount == 3)strcpy(color, "yellow");
+                if(levelCount == 4)strcpy(color, "purple");
+                if(levelCount == 5)strcpy(color, "green");
+                if(levelCount == 6)strcpy(color, "blue");
+                if(levelCount == 7)strcpy(color, "pink");
+                if(levelCount == 8)strcpy(color, "");
+            }
+        }
+    }
+
+    printf("\n");
+
+    free(queue);
+}
 int main() {
     Container* container = alocaContainer();
     char** VetorNomes = NULL;
@@ -65,6 +143,10 @@ int main() {
             break;
         case 7:
             addImagens(container->arvore,obterChar("nome",1));
+        break;
+        case 8:
+            imprimiGraphviz(container->arvore);
+            printLevelOrder(container->arvore);
         break;
         default:
             printf("\nOpcao invalida!\n");
