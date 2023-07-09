@@ -1,0 +1,1049 @@
+node [style=filled];
+"Mines of Minos" [fillcolor="#B6953C", label="Mines of Minos"]
+"Donkey Kong Junior" [fillcolor="#7C5575", label="Donkey Kong Junior"]
+"Snail Against Squirrel" [fillcolor="#01C9BA", label="Snail Against Squirrel"]
+"Cakewalk" [fillcolor="#BD9848", label="Cakewalk"]
+"Great Escape" [fillcolor="#256D29", label="Great Escape"]
+"Pole Position" [fillcolor="#0B38AA", label="Pole Position"]
+"Surfer's Paradise: But Danger Below!" [fillcolor="#4E6CAF", label="Surfer's Paradise: But Danger Below!"]
+"Backgammon" [fillcolor="#F71835", label="Backgammon"]
+"Cosmic Swarm" [fillcolor="#CDDD0D", label="Cosmic Swarm"]
+"Fireball (cassette)" [fillcolor="#2C2813", label="Fireball (cassette)"]
+"Klax" [fillcolor="#880855", label="Klax"]
+"Open Sesame" [fillcolor="#4F6D55", label="Open Sesame"]
+"River Raid" [fillcolor="#8A968D", label="River Raid"]
+"Star Raiders" [fillcolor="#4292E9", label="Star Raiders"]
+"Towering Inferno" [fillcolor="#2C4B45", label="Towering Inferno"]
+"Armor Ambush" [fillcolor="#4EDDC6", label="Armor Ambush"]
+"Blackjack" [fillcolor="#833F1B", label="Blackjack"]
+"Circus Atari" [fillcolor="#2D0ABF", label="Circus Atari"]
+"Deadly Discs" [fillcolor="#33DD8E", label="Deadly Discs"]
+"Entombed" [fillcolor="#A44213", label="Entombed"]
+"Gangster Alley" [fillcolor="#1C6BD7", label="Gangster Alley"]
+"Indy 500" [fillcolor="#E300EE", label="Indy 500"]
+"Malagai" [fillcolor="#2192B1", label="Malagai"]
+"Mr. Do's Castle" [fillcolor="#24B9BB", label="Mr. Do's Castle"]
+"Phantom-Panzer" [fillcolor="#999199", label="Phantom-Panzer"]
+"Raft Rider" [fillcolor="#81BE68", label="Raft Rider"]
+"Seaquest" [fillcolor="#486250", label="Seaquest"]
+"Space War" [fillcolor="#38C1DB", label="Space War"]
+"Street Racer" [fillcolor="#5DB789", label="Street Racer"]
+"Taz" [fillcolor="#882534", label="Taz"]
+"Video Olympics" [fillcolor="#D171EC", label="Video Olympics"]
+"Air Raid" [fillcolor="#6B0BC1", label="Air Raid"]
+"Astroblast" [fillcolor="#9DE404", label="Astroblast"]
+"Beany Bopper" [fillcolor="#DF8A5C", label="Beany Bopper"]
+"Bridge" [fillcolor="#1DB292", label="Bridge"]
+"Challenge of Nexar" [fillcolor="#0CB55B", label="Challenge of Nexar"]
+"Confrontation" [fillcolor="#9ADA29", label="Confrontation"]
+"Cruise Missile" [fillcolor="#6D8146", label="Cruise Missile"]
+"Desert Falcon" [fillcolor="#F6131F", label="Desert Falcon"]
+"E.T. the Extra-Terrestrial" [fillcolor="#A65E1D", label="E.T. the Extra-Terrestrial"]
+"Fast Eddie" [fillcolor="#6CC44E", label="Fast Eddie"]
+"Frogger" [fillcolor="#2B3071", label="Frogger"]
+"Gigolo" [fillcolor="#23B7E6", label="Gigolo"]
+"Haunted House" [fillcolor="#EC5A12", label="Haunted House"]
+"Jungle Fever" [fillcolor="#476102", label="Jungle Fever"]
+"Laser Volley" [fillcolor="#24AE57", label="Laser Volley"]
+"Maze Craze: A Game of Cops and Robbers" [fillcolor="#5238C8", label="Maze Craze: A Game of Cops and Robbers"]
+"Moon Patrol" [fillcolor="#20D4D0", label="Moon Patrol"]
+"No Escape!" [fillcolor="#FFE774", label="No Escape!"]
+"Parachute" [fillcolor="#DF7982", label="Parachute"]
+"Pinball" [fillcolor="#DE3347", label="Pinball"]
+"Q*bert's Qubes" [fillcolor="#364067", label="Q*bert's Qubes"]
+"RealSports Soccer" [fillcolor="#40F8D3", label="RealSports Soccer"]
+"Room of Doom" [fillcolor="#6DB446", label="Room of Doom"]
+"Skeet Shoot" [fillcolor="#1642AE", label="Skeet Shoot"]
+"Space Adventure" [fillcolor="#B5615F", label="Space Adventure"]
+"Spitfire Attack" [fillcolor="#AC8B23", label="Spitfire Attack"]
+"Star Wars: The Empire Strikes Back" [fillcolor="#96FA8F", label="Star Wars: The Empire Strikes Back"]
+"Super Baseball" [fillcolor="#5D594A", label="Super Baseball"]
+"Tac-Scan" [fillcolor="#6A636F", label="Tac-Scan"]
+"Threshold" [fillcolor="#141FB2", label="Threshold"]
+"Universal Chaos" [fillcolor="#EBB96C", label="Universal Chaos"]
+"Warlords" [fillcolor="#B0E613", label="Warlords"]
+"A Game of Concentration" [fillcolor="#856E6C", label="A Game of Concentration"]
+"Alien" [fillcolor="#D43DEE", label="Alien"]
+"Artillery Duel/Spike's Peak" [fillcolor="#54B74D", label="Artillery Duel/Spike's Peak"]
+"BASIC Programming" [fillcolor="#6ECECA", label="BASIC Programming"]
+"Basic Math AKA Fun With Numbers" [fillcolor="#4E9A3F", label="Basic Math AKA Fun With Numbers"]
+"Bermuda Triangle" [fillcolor="#CDCEFB", label="Bermuda Triangle"]
+"Bowling" [fillcolor="#D64F17", label="Bowling"]
+"Bumper Bash" [fillcolor="#FD136E", label="Bumper Bash"]
+"Casino" [fillcolor="#44CCA2", label="Casino"]
+"Chopper Command" [fillcolor="#582F75", label="Chopper Command"]
+"Commando" [fillcolor="#9C2613", label="Commando"]
+"Cosmic Commuter" [fillcolor="#9E74CF", label="Cosmic Commuter"]
+"Crazy Climber" [fillcolor="#84CF0C", label="Crazy Climber"]
+"Custer's Revenge" [fillcolor="#9EDA61", label="Custer's Revenge"]
+"Defender II" [fillcolor="#EFEC14", label="Defender II"]
+"Dodge 'Em" [fillcolor="#EED6E1", label="Dodge 'Em"]
+"Dragonfire" [fillcolor="#73BB06", label="Dragonfire"]
+"Eggomania" [fillcolor="#AA376D", label="Eggomania"]
+"Exocet Missile" [fillcolor="#FE6D03", label="Exocet Missile"]
+"Fighter Pilot" [fillcolor="#B48756", label="Fighter Pilot"]
+"Flash Gordon" [fillcolor="#EFB8DC", label="Flash Gordon"]
+"Frostbite" [fillcolor="#A07AB7", label="Frostbite"]
+"Ghost Manor" [fillcolor="#A3B0A7", label="Ghost Manor"]
+"Gopher" [fillcolor="#951BAA", label="Gopher"]
+"H.E.R.O." [fillcolor="#9033AB", label="H.E.R.O."]
+"I Want My Mommy" [fillcolor="#A4023D", label="I Want My Mommy"]
+"Jawbreaker" [fillcolor="#8EA2A3", label="Jawbreaker"]
+"Karate" [fillcolor="#ED63FD", label="Karate"]
+"Kung-Fu Master" [fillcolor="#7F188E", label="Kung-Fu Master"]
+"Lost Luggage" [fillcolor="#29B303", label="Lost Luggage"]
+"Mario Bros." [fillcolor="#C81421", label="Mario Bros."]
+"Midnight Magic" [fillcolor="#6EF97A", label="Midnight Magic"]
+"Mission 3000 A.D." [fillcolor="#966E6B", label="Mission 3000 A.D."]
+"Motocross Racer" [fillcolor="#37729B", label="Motocross Racer"]
+"Name This Game" [fillcolor="#61F118", label="Name This Game"]
+"Off Your Rocker" [fillcolor="#B038F5", label="Off Your Rocker"]
+"Outlaw" [fillcolor="#AD35C1", label="Outlaw"]
+"Pengo" [fillcolor="#DFEC5E", label="Pengo"]
+"Pick 'n Pile" [fillcolor="#31B3CB", label="Pick 'n Pile"]
+"Planet Patrol" [fillcolor="#F2EA7B", label="Planet Patrol"]
+"Pressure Cooker" [fillcolor="#687741", label="Pressure Cooker"]
+"Rabbit Transit (cassette)" [fillcolor="#13AACB", label="Rabbit Transit (cassette)"]
+"Reactor" [fillcolor="#93A955", label="Reactor"]
+"Rescue Terra 1" [fillcolor="#CFC3FB", label="Rescue Terra 1"]
+"Robin Hood/Sir Lancelot - The Joust" [fillcolor="#7244BB", label="Robin Hood/Sir Lancelot - The Joust"]
+"Sea Hawk" [fillcolor="#75E3E9", label="Sea Hawk"]
+"Shootin' Gallery" [fillcolor="#AADAE0", label="Shootin' Gallery"]
+"Sky Skipper" [fillcolor="#54497A", label="Sky Skipper"]
+"Solar Storm" [fillcolor="#B2661B", label="Solar Storm"]
+"Space Grid" [fillcolor="#487EB7", label="Space Grid"]
+"Spider Maze" [fillcolor="#EE9199", label="Spider Maze"]
+"Squeeze Box" [fillcolor="#80F130", label="Squeeze Box"]
+"Star Voyager" [fillcolor="#F3A87C", label="Star Voyager"]
+"Steeplechase" [fillcolor="#01FC5B", label="Steeplechase"]
+"Submarine Commander" [fillcolor="#A98B61", label="Submarine Commander"]
+"Super Challenge Football" [fillcolor="#564AEA", label="Super Challenge Football"]
+"Sword of Saros (cassette)" [fillcolor="#455F9E", label="Sword of Saros (cassette)"]
+"Tapeworm" [fillcolor="#C6C2B4", label="Tapeworm"]
+"The Official Frogger (cassette)" [fillcolor="#5FCE9C", label="The Official Frogger (cassette)"]
+"Title Match Pro Wrestling" [fillcolor="#219E24", label="Title Match Pro Wrestling"]
+"Tron: Deadly Discs" [fillcolor="#AD18AB", label="Tron: Deadly Discs"]
+"Video Checkers" [fillcolor="#7395C4", label="Video Checkers"]
+"Wabbit" [fillcolor="#E2885E", label="Wabbit"]
+"Worm War I" [fillcolor="#195D5D", label="Worm War I"]
+"3-D Tic-Tac-Toe" [fillcolor="#4171A3", label="3-D Tic-Tac-Toe"]
+"Adventure" [fillcolor="#659073", label="Adventure"]
+"Air-Sea Battle" [fillcolor="#2B31C3", label="Air-Sea Battle"]
+"Alpha Beam with Ernie" [fillcolor="#3DE2CF", label="Alpha Beam with Ernie"]
+"Artillery Duel/Chuck Norris Superkicks" [fillcolor="#4EBE85", label="Artillery Duel/Chuck Norris Superkicks"]
+"Asterix" [fillcolor="#F6BA65", label="Asterix"]
+"Atlantis" [fillcolor="#D49885", label="Atlantis"]
+"Bachelor Party" [fillcolor="#E75995", label="Bachelor Party"]
+"Barnstorming" [fillcolor="#DDF69B", label="Barnstorming"]
+"Battlezone" [fillcolor="#1BB45D", label="Battlezone"]
+"Berenstain Bears" [fillcolor="#FCF89D", label="Berenstain Bears"]
+"Big Bird's Egg Catch" [fillcolor="#B183A8", label="Big Bird's Egg Catch"]
+"Bobby Is Going Home" [fillcolor="#20E4EC", label="Bobby Is Going Home"]
+"Brain Games" [fillcolor="#934DBE", label="Brain Games"]
+"Bugs" [fillcolor="#833FF6", label="Bugs"]
+"Burning Desire" [fillcolor="#2F4AF6", label="Burning Desire"]
+"Canyon Bomber" [fillcolor="#764B84", label="Canyon Bomber"]
+"Centipede" [fillcolor="#6ED0D6", label="Centipede"]
+"Checkers" [fillcolor="#6B9A0D", label="Checkers"]
+"Chuck Norris Superkicks/Ghost Manor" [fillcolor="#B28C45", label="Chuck Norris Superkicks/Ghost Manor"]
+"Codebreaker" [fillcolor="#E9503C", label="Codebreaker"]
+"Communist Mutants from Space (cassette)" [fillcolor="#AC491D", label="Communist Mutants from Space (cassette)"]
+"Cookie Monster Munch" [fillcolor="#416882", label="Cookie Monster Munch"]
+"Cosmic Creeps" [fillcolor="#DE7525", label="Cosmic Creeps"]
+"Crackpots" [fillcolor="#8E356F", label="Crackpots"]
+"Cross Force" [fillcolor="#295B5E", label="Cross Force"]
+"Crystal Castles" [fillcolor="#912FF6", label="Crystal Castles"]
+"Dark Cavern" [fillcolor="#A82BC6", label="Dark Cavern"]
+"Death Trap" [fillcolor="#F5C562", label="Death Trap"]
+"Demon Attack" [fillcolor="#F4A150", label="Demon Attack"]
+"Dig Dug" [fillcolor="#800379", label="Dig Dug"]
+"Donald Duck's Speedboat" [fillcolor="#D27C6F", label="Donald Duck's Speedboat"]
+"Double Dunk" [fillcolor="#470132", label="Double Dunk"]
+"Dragster" [fillcolor="#6C2F21", label="Dragster"]
+"Earth Dies Screaming" [fillcolor="#2CF277", label="Earth Dies Screaming"]
+"Encounter at L-5" [fillcolor="#EFE69B", label="Encounter at L-5"]
+"Espial" [fillcolor="#333023", label="Espial"]
+"Fantastic Voyage" [fillcolor="#32A1ED", label="Fantastic Voyage"]
+"Fatal Run" [fillcolor="#725582", label="Fatal Run"]
+"Fire Fighter" [fillcolor="#199BF4", label="Fire Fighter"]
+"Fishing Derby" [fillcolor="#68CB43", label="Fishing Derby"]
+"Frankenstein's Monster" [fillcolor="#FF666F", label="Frankenstein's Monster"]
+"Frogs and Flies" [fillcolor="#62F20C", label="Frogs and Flies"]
+"Galaxian" [fillcolor="#D25F6A", label="Galaxian"]
+"Gauntlet" [fillcolor="#B9E769", label="Gauntlet"]
+"Ghostbusters" [fillcolor="#34A1B2", label="Ghostbusters"]
+"Glib" [fillcolor="#85D7C3", label="Glib"]
+"Grand Prix" [fillcolor="#32F654", label="Grand Prix"]
+"Guardian" [fillcolor="#DF0890", label="Guardian"]
+"Hangman" [fillcolor="#65F7BF", label="Hangman"]
+"Human Cannonball" [fillcolor="#8C28B6", label="Human Cannonball"]
+"Ikari Warriors" [fillcolor="#38FACE", label="Ikari Warriors"]
+"International Soccer" [fillcolor="#00B0DC", label="International Soccer"]
+"Joust" [fillcolor="#78F47A", label="Joust"]
+"Kaboom!" [fillcolor="#7FF4BF", label="Kaboom!"]
+"Killer Satellites (cassette)" [fillcolor="#55492F", label="Killer Satellites (cassette)"]
+"Kool-Aid Man" [fillcolor="#644671", label="Kool-Aid Man"]
+"Laser Blast" [fillcolor="#CBAD12", label="Laser Blast"]
+"Lock 'n' Chase" [fillcolor="#D559AE", label="Lock 'n' Chase"]
+"M.A.D." [fillcolor="#E115A1", label="M.A.D."]
+"Marauder" [fillcolor="#5A9696", label="Marauder"]
+"Masters of the Universe: The Power of He-Man" [fillcolor="#A2B31E", label="Masters of the Universe: The Power of He-Man"]
+"MegaBoy" [fillcolor="#1B1F29", label="MegaBoy"]
+"Miner 2049er" [fillcolor="#3B9386", label="Miner 2049er"]
+"Missile Command" [fillcolor="#2836DA", label="Missile Command"]
+"Mogul Maniac" [fillcolor="#EC8132", label="Mogul Maniac"]
+"MotoRodeo" [fillcolor="#7068FD", label="MotoRodeo"]
+"Mouse Trap" [fillcolor="#5C3485", label="Mouse Trap"]
+"Ms. Pac-Man" [fillcolor="#334550", label="Ms. Pac-Man"]
+"Night Stalker" [fillcolor="#C7AC55", label="Night Stalker"]
+"Obelix" [fillcolor="#4D2B88", label="Obelix"]
+"Oink!" [fillcolor="#D00597", label="Oink!"]
+"Othello" [fillcolor="#21F65C", label="Othello"]
+"Pac-Man" [fillcolor="#507A22", label="Pac-Man"]
+"Party Mix (cassette)" [fillcolor="#2D7050", label="Party Mix (cassette)"]
+"Pete Rose Baseball" [fillcolor="#8E6562", label="Pete Rose Baseball"]
+"Philly Flasher" [fillcolor="#F8BD3C", label="Philly Flasher"]
+"Piece o' Cake" [fillcolor="#5F6EB5", label="Piece o' Cake"]
+"Pitfall II: Lost Caverns" [fillcolor="#1E8B11", label="Pitfall II: Lost Caverns"]
+"Plaque Attack" [fillcolor="#585B05", label="Plaque Attack"]
+"Popeye" [fillcolor="#937F17", label="Popeye"]
+"Pyramid War" [fillcolor="#5B2645", label="Pyramid War"]
+"Quest for Quintana Roo" [fillcolor="#522B8F", label="Quest for Quintana Roo"]
+"Radar" [fillcolor="#01C08F", label="Radar"]
+"Ram It" [fillcolor="#3DA882", label="Ram It"]
+"RealSports Boxing" [fillcolor="#A4E4BB", label="RealSports Boxing"]
+"RealSports Volleyball" [fillcolor="#D9900A", label="RealSports Volleyball"]
+"Riddle of the Sphinx" [fillcolor="#6E5409", label="Riddle of the Sphinx"]
+"Road Runner" [fillcolor="#A0BF05", label="Road Runner"]
+"Robot Tank" [fillcolor="#C26539", label="Robot Tank"]
+"Save Our Ship" [fillcolor="#83A31E", label="Save Our Ship"]
+"Seahawk" [fillcolor="#905429", label="Seahawk"]
+"Sentinel" [fillcolor="#CB4BE7", label="Sentinel"]
+"Sir Lancelot" [fillcolor="#FF86E5", label="Sir Lancelot"]
+"Sky Diver" [fillcolor="#EF0CD6", label="Sky Diver"]
+"Slot Racers" [fillcolor="#592627", label="Slot Racers"]
+"Snoopy and the Red Baron" [fillcolor="#BEA86E", label="Snoopy and the Red Baron"]
+"Sorcerer" [fillcolor="#B08CEA", label="Sorcerer"]
+"Space Canyon" [fillcolor="#DDEB59", label="Space Canyon"]
+"Space Jockey" [fillcolor="#2919D6", label="Space Jockey"]
+"Spacemaster X-7" [fillcolor="#71F5D9", label="Spacemaster X-7"]
+"Spiderdroid" [fillcolor="#D1973E", label="Spiderdroid"]
+"Sprint Master" [fillcolor="#30AA31", label="Sprint Master"]
+"Stampede" [fillcolor="#A6CFB8", label="Stampede"]
+"Star Strike" [fillcolor="#111B51", label="Star Strike"]
+"Star Wars: Jedi Arena" [fillcolor="#6E73F9", label="Star Wars: Jedi Arena"]
+"Stargunner" [fillcolor="#A5976E", label="Stargunner"]
+"Strategy X" [fillcolor="#9488D0", label="Strategy X"]
+"Stunt Man" [fillcolor="#84D85F", label="Stunt Man"]
+"Suicide Mission (cassette)" [fillcolor="#1A265A", label="Suicide Mission (cassette)"]
+"Super Breakout" [fillcolor="#0FF371", label="Super Breakout"]
+"Super Football" [fillcolor="#CECC67", label="Super Football"]
+"Survival Island (cassette)" [fillcolor="#769EE9", label="Survival Island (cassette)"]
+"Swordquest: Fireworld" [fillcolor="#062B6E", label="Swordquest: Fireworld"]
+"Tank City" [fillcolor="#6AFA0C", label="Tank City"]
+"Task Force" [fillcolor="#4CECC7", label="Task Force"]
+"The Activision Decathlon" [fillcolor="#DF17F1", label="The Activision Decathlon"]
+"The Texas Chainsaw Massacre" [fillcolor="#F8F288", label="The Texas Chainsaw Massacre"]
+"Time Pilot" [fillcolor="#799DDC", label="Time Pilot"]
+"Tomcat: The F-14 Fighter Simulator AKA Dan Kitchen's Tomcat: The F-14 Fighter Simulator" [fillcolor="#2EBB2D", label="Tomcat: The F-14 Fighter Simulator AKA Dan Kitchen's Tomcat: The F-14 Fighter Simulator"]
+"Treasure Below" [fillcolor="#21E069", label="Treasure Below"]
+"Turmoil" [fillcolor="#13B331", label="Turmoil"]
+"Vanguard" [fillcolor="#C2F7DD", label="Vanguard"]
+"Video Jogger" [fillcolor="#2743DA", label="Video Jogger"]
+"Video Reflex" [fillcolor="#1B1CC2", label="Video Reflex"]
+"Wall-Defender" [fillcolor="#75E7BF", label="Wall-Defender"]
+"Wing War" [fillcolor="#A7E9E4", label="Wing War"]
+"Zaxxon" [fillcolor="#EE70ED", label="Zaxxon"]
+"
+" [fillcolor="#02B5AF", label="
+"]
+"32 in 1" [fillcolor="#BA2372", label="32 in 1"]
+"Acid Drop" [fillcolor="#7BA68B", label="Acid Drop"]
+"Adventures of Tron" [fillcolor="#69BCDE", label="Adventures of Tron"]
+"Air Raiders" [fillcolor="#FEBCEB", label="Air Raiders"]
+"Airlock" [fillcolor="#82BC2A", label="Airlock"]
+"Alien's Return" [fillcolor="#378548", label="Alien's Return"]
+"Amidar" [fillcolor="#6E0EB3", label="Amidar"]
+"Artillery Duel" [fillcolor="#5AFCE7", label="Artillery Duel"]
+"Artillery Duel/Ghost Manor" [fillcolor="#5E9CF8", label="Artillery Duel/Ghost Manor"]
+"Assault" [fillcolor="#E27D82", label="Assault"]
+"Asteroids" [fillcolor="#91FF73", label="Asteroids"]
+"Atari Video Cube" [fillcolor="#16838C", label="Atari Video Cube"]
+"Atlantis II" [fillcolor="#F71837", label="Atlantis II"]
+"BMX Airmaster" [fillcolor="#460074", label="BMX Airmaster"]
+"Bachelorette Party" [fillcolor="#5AB8A7", label="Bachelorette Party"]
+"Bank Heist" [fillcolor="#64211E", label="Bank Heist"]
+"Base Attack" [fillcolor="#8C8998", label="Base Attack"]
+"Basketball" [fillcolor="#BBAAFA", label="Basketball"]
+"Beamrider" [fillcolor="#882F70", label="Beamrider"]
+"Beat Em and Eat Em" [fillcolor="#3544D2", label="Beat Em and Eat Em"]
+"Bermuda" [fillcolor="#28FC65", label="Bermuda"]
+"Berzerk" [fillcolor="#2FDB1A", label="Berzerk"]
+"Birthday Mania" [fillcolor="#BE71A2", label="Birthday Mania"]
+"Blue Print" [fillcolor="#44461A", label="Blue Print"]
+"£ƒ|U" [fillcolor="#C7CF29", label="£ƒ|U"]
+"pÐƒ|U" [fillcolor="#79AAB6", label="pÐƒ|U"]
+"Breakout" [fillcolor="#CC1EA2", label="Breakout"]
+"Buck Rogers: Planet of Zoom" [fillcolor="#1A30B4", label="Buck Rogers: Planet of Zoom"]
+"Bump 'n' Jump" [fillcolor="#509F11", label="Bump 'n' Jump"]
+"BurgerTime" [fillcolor="#1DFAFB", label="BurgerTime"]
+"Busy Police" [fillcolor="#2327A4", label="Busy Police"]
+"California Games" [fillcolor="#E1730A", label="California Games"]
+"Carnival" [fillcolor="#AD3BD5", label="Carnival"]
+"Cathouse Blues" [fillcolor="#75649C", label="Cathouse Blues"]
+"Challenge" [fillcolor="#065CA8", label="Challenge"]
+"Chase the Chuck Wagon" [fillcolor="#F6BC54", label="Chase the Chuck Wagon"]
+"China Syndrome" [fillcolor="#8F6539", label="China Syndrome"]
+"Chuck Norris Superkicks" [fillcolor="#BFD0B4", label="Chuck Norris Superkicks"]
+"Chuck Norris Superkicks/Spike's Peak" [fillcolor="#26903A", label="Chuck Norris Superkicks/Spike's Peak"]
+"Coconuts" [fillcolor="#740193", label="Coconuts"]
+"Combat" [fillcolor="#3EB9FB", label="Combat"]
+"Commando Raid" [fillcolor="#E79BB3", label="Commando Raid"]
+"Condor Attack" [fillcolor="#F7F6A2", label="Condor Attack"]
+"Congo Bongo" [fillcolor="#45D6F0", label="Congo Bongo"]
+"Cosmic Ark" [fillcolor="#852D41", label="Cosmic Ark"]
+"Cosmic Corridor" [fillcolor="#9BE327", label="Cosmic Corridor"]
+"Cosmic Free Fire" [fillcolor="#116A6B", label="Cosmic Free Fire"]
+"Crab Control" [fillcolor="#EE633E", label="Crab Control"]
+"Crash Dive" [fillcolor="#39CADE", label="Crash Dive"]
+"Creature Strike" [fillcolor="#B6AAD2", label="Creature Strike"]
+"Crossbow" [fillcolor="#AB6DD7", label="Crossbow"]
+"Crypts of Chaos" [fillcolor="#00148D", label="Crypts of Chaos"]
+"Cubicolor" [fillcolor="#BB86C7", label="Cubicolor"]
+"Dancing Plate" [fillcolor="#E823EF", label="Dancing Plate"]
+"Dark Chambers" [fillcolor="#C5702C", label="Dark Chambers"]
+"Deadly Duck" [fillcolor="#4F56BF", label="Deadly Duck"]
+"Defender" [fillcolor="#39B182", label="Defender"]
+"Demolition Herby" [fillcolor="#321293", label="Demolition Herby"]
+"Demons to Diamonds" [fillcolor="#4A343D", label="Demons to Diamonds"]
+"Dice Puzzle" [fillcolor="#E69CC4", label="Dice Puzzle"]
+"Dishaster" [fillcolor="#48FEAC", label="Dishaster"]
+"Dolphin" [fillcolor="#05E7B3", label="Dolphin"]
+"Donkey Kong" [fillcolor="#03A67E", label="Donkey Kong"]
+"Double Dragon" [fillcolor="#CEA8FB", label="Double Dragon"]
+"Dragon Treasure" [fillcolor="#AE8B4B", label="Dragon Treasure"]
+"Dragonstomper (cassette)" [fillcolor="#FA0597", label="Dragonstomper (cassette)"]
+"Dungeon Master" [fillcolor="#2E8B61", label="Dungeon Master"]
+"Earth Attack" [fillcolor="#8D3711", label="Earth Attack"]
+"Eddy Langfinger; der Museumsdieb" [fillcolor="#7993E1", label="Eddy Langfinger; der Museumsdieb"]
+"Eli's Ladder" [fillcolor="#D84365", label="Eli's Ladder"]
+"Enduro" [fillcolor="#D25652", label="Enduro"]
+"Escape from the Mindmaster (cassette)" [fillcolor="#92F04C", label="Escape from the Mindmaster (cassette)"]
+"Exocet" [fillcolor="#8D054D", label="Exocet"]
+"Extra Terrestrials" [fillcolor="#AB79ED", label="Extra Terrestrials"]
+"Farmer Dan" [fillcolor="#4FB555", label="Farmer Dan"]
+"Fast Food" [fillcolor="#80275B", label="Fast Food"]
+"Fathom" [fillcolor="#44CEC4", label="Fathom"]
+"Final Approach" [fillcolor="#67A25D", label="Final Approach"]
+"Fire Fly" [fillcolor="#78F196", label="Fire Fly"]
+"Fisher Price" [fillcolor="#76D519", label="Fisher Price"]
+"Flag Capture" [fillcolor="#867633", label="Flag Capture"]
+"Football" [fillcolor="#8AF798", label="Football"]
+"Freeway" [fillcolor="#756638", label="Freeway"]
+"Frogger II: ThreeeDeep!" [fillcolor="#739B39", label="Frogger II: ThreeeDeep!"]
+"Front Line" [fillcolor="#123C56", label="Front Line"]
+"G.I. Joe: Cobra Strike" [fillcolor="#A48F62", label="G.I. Joe: Cobra Strike"]
+"Gamma-Attack" [fillcolor="#C048CD", label="Gamma-Attack"]
+"Gas Hog" [fillcolor="#9EAAFE", label="Gas Hog"]
+"General Retreat" [fillcolor="#5D1EBA", label="General Retreat"]
+"Ghost Manor/Spike's Peak" [fillcolor="#13830D", label="Ghost Manor/Spike's Peak"]
+"Ghostbusters II" [fillcolor="#5F2E44", label="Ghostbusters II"]
+"Glacier Patrol" [fillcolor="#1E7CCE", label="Glacier Patrol"]
+"Golf" [fillcolor="#85E4ED", label="Golf"]
+"Gorf" [fillcolor="#85E5B3", label="Gorf"]
+"Gravitar" [fillcolor="#3BA105", label="Gravitar"]
+"Gremlins" [fillcolor="#EEDF06", label="Gremlins"]
+"Gyruss" [fillcolor="#4B6292", label="Gyruss"]
+"Halloween" [fillcolor="#A85DA4", label="Halloween"]
+"Harbor Escape" [fillcolor="#1AF6D4", label="Harbor Escape"]
+"Home Run" [fillcolor="#3070E3", label="Home Run"]
+"Hunt & Score (see Concentration)" [fillcolor="#435F0B", label="Hunt & Score (see Concentration)"]
+"Ice Hockey" [fillcolor="#15B559", label="Ice Hockey"]
+"Inca Gold" [fillcolor="#5805C6", label="Inca Gold"]
+"Infiltrate" [fillcolor="#67FA77", label="Infiltrate"]
+"James Bond 007" [fillcolor="#AD730F", label="James Bond 007"]
+"Journey Escape" [fillcolor="#0337E2", label="Journey Escape"]
+"Jr. Pac-Man" [fillcolor="#12946C", label="Jr. Pac-Man"]
+"Jungle Hunt" [fillcolor="#96EA69", label="Jungle Hunt"]
+"Kangaroo" [fillcolor="#E42297", label="Kangaroo"]
+"Keystone Kapers" [fillcolor="#05105D", label="Keystone Kapers"]
+"King Kong" [fillcolor="#C9813D", label="King Kong"]
+"Knight on the Town" [fillcolor="#B3CD90", label="Knight on the Town"]
+"Krull" [fillcolor="#8CB12F", label="Krull"]
+"Lady in Wading" [fillcolor="#4E1E20", label="Lady in Wading"]
+"Laser Gates" [fillcolor="#206E70", label="Laser Gates"]
+"Lochjaw" [fillcolor="#3095AD", label="Lochjaw"]
+"London Blitz" [fillcolor="#D969F4", label="London Blitz"]
+"M*A*S*H" [fillcolor="#AD354C", label="M*A*S*H"]
+"MagiCard" [fillcolor="#27259D", label="MagiCard"]
+"Mangia" [fillcolor="#959BD2", label="Mangia"]
+"Marine Wars" [fillcolor="#4B7FFE", label="Marine Wars"]
+"Master Builder" [fillcolor="#F765B8", label="Master Builder"]
+"Math Gran Prix" [fillcolor="#A97EBA", label="Math Gran Prix"]
+"Mega Force" [fillcolor="#185ECE", label="Mega Force"]
+"Megamania" [fillcolor="#61DCE5", label="Megamania"]
+"Millipede" [fillcolor="#B4CFDA", label="Millipede"]
+"Miner 2049er II" [fillcolor="#40BF98", label="Miner 2049er II"]
+"Miniature Golf" [fillcolor="#39243B", label="Miniature Golf"]
+"Missile Control" [fillcolor="#3E6E7C", label="Missile Control"]
+"Mission Survive" [fillcolor="#AA301B", label="Mission Survive"]
+"Montezuma's Revenge: Starring Panama Joe" [fillcolor="#D8011B", label="Montezuma's Revenge: Starring Panama Joe"]
+"Moonsweeper" [fillcolor="#7BD679", label="Moonsweeper"]
+"Motocross" [fillcolor="#A5DF4E", label="Motocross"]
+"Mountain King" [fillcolor="#FD1CB9", label="Mountain King"]
+"Mr. Do!" [fillcolor="#431E26", label="Mr. Do!"]
+"Mr. Postman" [fillcolor="#19EC14", label="Mr. Postman"]
+"My Golf" [fillcolor="#AFFD13", label="My Golf"]
+"Night Driver" [fillcolor="#A335EB", label="Night Driver"]
+"Nightmare" [fillcolor="#BEC7C4", label="Nightmare"]
+"Nuts" [fillcolor="#89D62F", label="Nuts"]
+"Ocean City Defender" [fillcolor="#1E8AA1", label="Ocean City Defender"]
+"Off the Wall" [fillcolor="#FB5C91", label="Off the Wall"]
+"Omega Race" [fillcolor="#4A4A49", label="Omega Race"]
+"Oscar's Trash Race" [fillcolor="#3F6DB4", label="Oscar's Trash Race"]
+"Out of Control" [fillcolor="#5B3DB3", label="Out of Control"]
+"Pac-Kong" [fillcolor="#5EE195", label="Pac-Kong"]
+"Panda Chase" [fillcolor="#00564D", label="Panda Chase"]
+"Paris Attack" [fillcolor="#7D84DC", label="Paris Attack"]
+"PelÃ©'s Soccer AKA Championship Soccer" [fillcolor="#049E7A", label="PelÃ©'s Soccer AKA Championship Soccer"]
+"Pepsi Invaders" [fillcolor="#990E22", label="Pepsi Invaders"]
+"Phantom Tank" [fillcolor="#DD068A", label="Phantom Tank"]
+"Phaser Patrol (cassette)" [fillcolor="#0EA307", label="Phaser Patrol (cassette)"]
+"Phoenix" [fillcolor="#9CFF40", label="Phoenix"]
+"Picnic" [fillcolor="#1FEF5B", label="Picnic"]
+"Pigs in Space" [fillcolor="#625EBB", label="Pigs in Space"]
+"Piraten-Schiff" [fillcolor="#F21D78", label="Piraten-Schiff"]
+"Pitfall!" [fillcolor="#EBF212", label="Pitfall!"]
+"Planeten Patrouile" [fillcolor="#23F071", label="Planeten Patrouile"]
+"Polaris" [fillcolor="#B8B19F", label="Polaris"]
+"Pooyan" [fillcolor="#9344BB", label="Pooyan"]
+"Porky's" [fillcolor="#2AD5B4", label="Porky's"]
+"Private Eye" [fillcolor="#1760A3", label="Private Eye"]
+"Q*bert" [fillcolor="#005ECD", label="Q*bert"]
+"Quadrun" [fillcolor="#EC7B45", label="Quadrun"]
+"Quick Step" [fillcolor="#B5C8DE", label="Quick Step"]
+"Racquetball" [fillcolor="#ACCD35", label="Racquetball"]
+"Radar Lock" [fillcolor="#1A1438", label="Radar Lock"]
+"Raiders of the Lost Ark" [fillcolor="#9D3865", label="Raiders of the Lost Ark"]
+"Rampage" [fillcolor="#1EFBE2", label="Rampage"]
+"RealSports Baseball" [fillcolor="#C8E00A", label="RealSports Baseball"]
+"RealSports Football" [fillcolor="#3A5327", label="RealSports Football"]
+"RealSports Tennis" [fillcolor="#E763E5", label="RealSports Tennis"]
+"Red Sea Crossing" [fillcolor="#F9C961", label="Red Sea Crossing"]
+"Revenge of the Beefsteak Tomatoes" [fillcolor="#DA621D", label="Revenge of the Beefsteak Tomatoes"]
+"River Patrol" [fillcolor="#E66EFF", label="River Patrol"]
+"River Raid II" [fillcolor="#D8B93F", label="River Raid II"]
+"Robin Hood" [fillcolor="#DFAC09", label="Robin Hood"]
+"Robot Commando Raid" [fillcolor="#E49119", label="Robot Commando Raid"]
+"Roc'n Rope" [fillcolor="#A35314", label="Roc'n Rope"]
+"Rubik's Cube" [fillcolor="#59B45B", label="Rubik's Cube"]
+"Scuba Diver" [fillcolor="#22020D", label="Scuba Diver"]
+"Sea Hunt" [fillcolor="#7637DD", label="Sea Hunt"]
+"Seamonster" [fillcolor="#A53986", label="Seamonster"]
+"Secret Quest" [fillcolor="#9B3E3D", label="Secret Quest"]
+"Shark Attack" [fillcolor="#7E4096", label="Shark Attack"]
+"Shuttle Orbiter" [fillcolor="#332D85", label="Shuttle Orbiter"]
+"Skate Boardin': A Radical Adventure" [fillcolor="#CD331C", label="Skate Boardin': A Radical Adventure"]
+"Skiing" [fillcolor="#46CFEA", label="Skiing"]
+"Sky Jinks" [fillcolor="#5B7E9B", label="Sky Jinks"]
+"Slot Machine" [fillcolor="#9C39DC", label="Slot Machine"]
+"Smurf: Rescue in Gargamel's Castle" [fillcolor="#60F360", label="Smurf: Rescue in Gargamel's Castle"]
+"Sneak 'N Peek" [fillcolor="#B22D51", label="Sneak 'N Peek"]
+"Solar Fox" [fillcolor="#F83013", label="Solar Fox"]
+"Solaris" [fillcolor="#A767E2", label="Solaris"]
+"Sorcerer's Apprentice" [fillcolor="#4A376F", label="Sorcerer's Apprentice"]
+"Space Attack" [fillcolor="#8E4E49", label="Space Attack"]
+"Space Cavern" [fillcolor="#E1F9B0", label="Space Cavern"]
+"Space Invaders" [fillcolor="#37124D", label="Space Invaders"]
+"Space Shuttle: A Journey into Space" [fillcolor="#752767", label="Space Shuttle: A Journey into Space"]
+"Spacechase" [fillcolor="#16B9F5", label="Spacechase"]
+"Spider Fighter" [fillcolor="#824135", label="Spider Fighter"]
+"Spider-Man" [fillcolor="#0E5B95", label="Spider-Man"]
+"Spike's Peak" [fillcolor="#3C40DC", label="Spike's Peak"]
+"Springer" [fillcolor="#1C1D4F", label="Springer"]
+"Spy Hunter" [fillcolor="#6880B7", label="Spy Hunter"]
+"Sssnake" [fillcolor="#818EBD", label="Sssnake"]
+"Star Fox" [fillcolor="#D4E98C", label="Star Fox"]
+"Star Ship" [fillcolor="#791CB3", label="Star Ship"]
+"Star Trek: Strategic Operations Simulator" [fillcolor="#8BBB59", label="Star Trek: Strategic Operations Simulator"]
+"Star Wars Return of the Jedi: Death Star Battle" [fillcolor="#8E2DA4", label="Star Wars Return of the Jedi: Death Star Battle"]
+"Star Wars: The Arcade Game" [fillcolor="#685611", label="Star Wars: The Arcade Game"]
+"Stargate" [fillcolor="#FC4BE0", label="Stargate"]
+"Starmaster" [fillcolor="#3D788B", label="Starmaster"]
+"Stellar Track" [fillcolor="#D02591", label="Stellar Track"]
+"Strawberry Shortcake: Musical Match-ups" [fillcolor="#1E9858", label="Strawberry Shortcake: Musical Match-ups"]
+"Stronghold" [fillcolor="#698449", label="Stronghold"]
+"Sub-Scan" [fillcolor="#602501", label="Sub-Scan"]
+"Subterranea" [fillcolor="#B0A3C1", label="Subterranea"]
+"Summer Games" [fillcolor="#ADC2AB", label="Summer Games"]
+"Super Baumeister" [fillcolor="#02A7A5", label="Super Baumeister"]
+"Super Challenge Baseball" [fillcolor="#E4D7CD", label="Super Challenge Baseball"]
+"Super Cobra" [fillcolor="#C6671B", label="Super Cobra"]
+"Superman" [fillcolor="#0EE450", label="Superman"]
+"Surround" [fillcolor="#A2F2A7", label="Surround"]
+"Survival Run" [fillcolor="#4B9DF6", label="Survival Run"]
+"Swordquest: Earthworld" [fillcolor="#18E7BC", label="Swordquest: Earthworld"]
+"Swordquest: Waterworld" [fillcolor="#04CCCB", label="Swordquest: Waterworld"]
+"Tank Brigade" [fillcolor="#7C3D01", label="Tank Brigade"]
+"Tanks But No Tanks" [fillcolor="#B595AF", label="Tanks But No Tanks"]
+"Tapper" [fillcolor="#EAF6D1", label="Tapper"]
+"Tax Avoiders" [fillcolor="#C0890F", label="Tax Avoiders"]
+"Tennis" [fillcolor="#323816", label="Tennis"]
+"The Music Machine" [fillcolor="#6E319C", label="The Music Machine"]
+"The Smurfs Save the Day[19]" [fillcolor="#DAA8D6", label="The Smurfs Save the Day[19]"]
+"The Year 1999" [fillcolor="#465553", label="The Year 1999"]
+"Thunderground" [fillcolor="#86E56E", label="Thunderground"]
+"Time Warp" [fillcolor="#8B45CE", label="Time Warp"]
+"Tomarc the Barbarian" [fillcolor="#A6994E", label="Tomarc the Barbarian"]
+"Tooth Protectors" [fillcolor="#12ECC8", label="Tooth Protectors"]
+"Track & Field" [fillcolor="#F6C964", label="Track & Field"]
+"Trick Shot" [fillcolor="#5FF780", label="Trick Shot"]
+"Tunnel Runner" [fillcolor="#B4C4F5", label="Tunnel Runner"]
+"Tutankham" [fillcolor="#B2D192", label="Tutankham"]
+"Up'n Down" [fillcolor="#5C2AD7", label="Up'n Down"]
+"Venture" [fillcolor="#7131EE", label="Venture"]
+"Video Chess" [fillcolor="#95ED52", label="Video Chess"]
+"Video Life" [fillcolor="#1140BC", label="Video Life"]
+"Video Pinball" [fillcolor="#6A141E", label="Video Pinball"]
+"Vulture Attack" [fillcolor="#A920B4", label="Vulture Attack"]
+"Wall Ball" [fillcolor="#404CB0", label="Wall Ball"]
+"War Zone" [fillcolor="#46104B", label="War Zone"]
+"Weltraumtunnel (Space Tunnel)" [fillcolor="#DF4B7F", label="Weltraumtunnel (Space Tunnel)"]
+"Wizard of Wor" [fillcolor="#E6BBE3", label="Wizard of Wor"]
+"Xenophobe" [fillcolor="#74BD8D", label="Xenophobe"]
+"Zoo Fun" [fillcolor="#90FC66", label="Zoo Fun"]
+"Steeplechase" [fillcolor="#01FC5B", label="Steeplechase"]
+"Submarine Commander" [fillcolor="#A98B61", label="Submarine Commander"]
+"Sorcerer's Apprentice" [fillcolor="#4A376F", label="Sorcerer's Apprentice"]
+"Space Attack" [fillcolor="#8E4E49", label="Space Attack"]
+"Warplock" [fillcolor="#F79608", label="Warplock"]
+"Westward Ho" [fillcolor="#AED04D", label="Westward Ho"]
+"Winter Games" [fillcolor="#94614B", label="Winter Games"]
+"Word Zapper" [fillcolor="#F44693", label="Word Zapper"]
+"X-Man" [fillcolor="#516E06", label="X-Man"]
+"Z-Tack" [fillcolor="#2D55AF", label="Z-Tack"]
+"Stargunner" [fillcolor="#A5976E", label="Stargunner"]
+"Strategy X" [fillcolor="#9488D0", label="Strategy X"]
+"Stunt Man" [fillcolor="#84D85F", label="Stunt Man"]
+"Suicide Mission (cassette)" [fillcolor="#1A265A", label="Suicide Mission (cassette)"]
+"Stargate" [fillcolor="#FC4BE0", label="Stargate"]
+"Starmaster" [fillcolor="#3D788B", label="Starmaster"]
+"Stellar Track" [fillcolor="#D02591", label="Stellar Track"]
+"Strawberry Shortcake: Musical Match-ups" [fillcolor="#1E9858", label="Strawberry Shortcake: Musical Match-ups"]
+"Stronghold" [fillcolor="#698449", label="Stronghold"]
+"Sub-Scan" [fillcolor="#602501", label="Sub-Scan"]
+"Subterranea" [fillcolor="#B0A3C1", label="Subterranea"]
+"Summer Games" [fillcolor="#ADC2AB", label="Summer Games"]
+ "Xenophobe" -> "Z-Tack" 
+ "Xenophobe" -> "X-Man" 
+ "Zaxxon" -> "Zoo Fun" 
+ "Zaxxon" -> "Xenophobe" 
+ "Wizard of Wor" -> "Word Zapper" 
+ "Wizard of Wor" -> "Winter Games" 
+ "Weltraumtunnel (Space Tunnel)" -> "Westward Ho" 
+ "Weltraumtunnel (Space Tunnel)" -> "Warplock" 
+ "Wing War" -> "Wizard of Wor" 
+ "Wing War" -> "Weltraumtunnel (Space Tunnel)" 
+ "Worm War I" -> "Zaxxon" 
+ "Worm War I" -> "Wing War" 
+ "Wall-Defender" -> "War Zone" 
+ "Wall-Defender" -> "Wall Ball" 
+ "Video Reflex" -> "Vulture Attack" 
+ "Video Reflex" -> "Video Pinball" 
+ "Wabbit" -> "Wall-Defender" 
+ "Wabbit" -> "Video Reflex" 
+ "Warlords" -> "Worm War I" 
+ "Warlords" -> "Wabbit" 
+ "Video Jogger" -> "Video Life" 
+ "Video Jogger" -> "Video Chess" 
+ "Vanguard" -> "Venture" 
+ "Vanguard" -> "Up'n Down" 
+ "Video Checkers" -> "Video Jogger" 
+ "Video Checkers" -> "Vanguard" 
+ "Turmoil" -> "Tutankham" 
+ "Turmoil" -> "Tunnel Runner" 
+ "Treasure Below" -> "Trick Shot" 
+ "Treasure Below" -> "Track & Field" 
+ "Tron: Deadly Discs" -> "Turmoil" 
+ "Tron: Deadly Discs" -> "Treasure Below" 
+ "Universal Chaos" -> "Video Checkers" 
+ "Universal Chaos" -> "Tron: Deadly Discs" 
+ "Video Olympics" -> "Warlords" 
+ "Video Olympics" -> "Universal Chaos" 
+ "Tomcat: The F-14 Fighter Simulator AKA Dan Kitchen's Tomcat: The F-14 Fighter Simulator" -> "Tooth Protectors" 
+ "Tomcat: The F-14 Fighter Simulator AKA Dan Kitchen's Tomcat: The F-14 Fighter Simulator" -> "Tomarc the Barbarian" 
+ "Time Pilot" -> "Time Warp" 
+ "Time Pilot" -> "Thunderground" 
+ "Title Match Pro Wrestling" -> "Tomcat: The F-14 Fighter Simulator AKA Dan Kitchen's Tomcat: The F-14 Fighter Simulator" 
+ "Title Match Pro Wrestling" -> "Time Pilot" 
+ "The Texas Chainsaw Massacre" -> "The Year 1999" 
+ "The Texas Chainsaw Massacre" -> "The Smurfs Save the Day[19]" 
+ "The Activision Decathlon" -> "The Music Machine" 
+ "The Activision Decathlon" -> "Tennis" 
+ "The Official Frogger (cassette)" -> "The Texas Chainsaw Massacre" 
+ "The Official Frogger (cassette)" -> "The Activision Decathlon" 
+ "Threshold" -> "Title Match Pro Wrestling" 
+ "Threshold" -> "The Official Frogger (cassette)" 
+ "Task Force" -> "Tax Avoiders" 
+ "Task Force" -> "Tapper" 
+ "Tank City" -> "Tanks But No Tanks" 
+ "Tank City" -> "Tank Brigade" 
+ "Tapeworm" -> "Task Force" 
+ "Tapeworm" -> "Tank City" 
+ "Swordquest: Fireworld" -> "Swordquest: Waterworld" 
+ "Swordquest: Fireworld" -> "Swordquest: Earthworld" 
+ "Survival Island (cassette)" -> "Survival Run" 
+ "Survival Island (cassette)" -> "Surround" 
+ "Sword of Saros (cassette)" -> "Swordquest: Fireworld" 
+ "Sword of Saros (cassette)" -> "Survival Island (cassette)" 
+ "Tac-Scan" -> "Tapeworm" 
+ "Tac-Scan" -> "Sword of Saros (cassette)" 
+ "Taz" -> "Threshold" 
+ "Taz" -> "Tac-Scan" 
+ "Towering Inferno" -> "Video Olympics" 
+ "Towering Inferno" -> "Taz" 
+ "Super Football" -> "Superman" 
+ "Super Football" -> "Super Cobra" 
+ "Super Breakout" -> "Super Challenge Baseball" 
+ "Super Breakout" -> "Super Baumeister" 
+ "Super Challenge Football" -> "Super Football" 
+ "Super Challenge Football" -> "Super Breakout" 
+ "Suicide Mission (cassette)" -> "Summer Games" 
+ "Suicide Mission (cassette)" -> "Subterranea" 
+ "Stunt Man" -> "Sub-Scan" 
+ "Stunt Man" -> "Stronghold" 
+ "Submarine Commander" -> "Suicide Mission (cassette)" 
+ "Submarine Commander" -> "Stunt Man" 
+ "Super Baseball" -> "Super Challenge Football" 
+ "Super Baseball" -> "Submarine Commander" 
+ "Strategy X" -> "Strawberry Shortcake: Musical Match-ups" 
+ "Strategy X" -> "Stellar Track" 
+ "Stargunner" -> "Starmaster" 
+ "Stargunner" -> "Stargate" 
+ "Steeplechase" -> "Strategy X" 
+ "Steeplechase" -> "Stargunner" 
+ "Star Wars: Jedi Arena" -> "Star Wars: The Arcade Game" 
+ "Star Wars: Jedi Arena" -> "Star Wars Return of the Jedi: Death Star Battle" 
+ "Star Strike" -> "Star Trek: Strategic Operations Simulator" 
+ "Star Strike" -> "Star Ship" 
+ "Star Voyager" -> "Star Wars: Jedi Arena" 
+ "Star Voyager" -> "Star Strike" 
+ "Star Wars: The Empire Strikes Back" -> "Steeplechase" 
+ "Star Wars: The Empire Strikes Back" -> "Star Voyager" 
+ "Street Racer" -> "Super Baseball" 
+ "Street Racer" -> "Star Wars: The Empire Strikes Back" 
+ "Stampede" -> "Star Fox" 
+ "Stampede" -> "Sssnake" 
+ "Sprint Master" -> "Spy Hunter" 
+ "Sprint Master" -> "Springer" 
+ "Squeeze Box" -> "Stampede" 
+ "Squeeze Box" -> "Sprint Master" 
+ "Spiderdroid" -> "Spike's Peak" 
+ "Spiderdroid" -> "Spider-Man" 
+ "Spacemaster X-7" -> "Spider Fighter" 
+ "Spacemaster X-7" -> "Spacechase" 
+ "Spider Maze" -> "Spiderdroid" 
+ "Spider Maze" -> "Spacemaster X-7" 
+ "Spitfire Attack" -> "Squeeze Box" 
+ "Spitfire Attack" -> "Spider Maze" 
+ "Space Jockey" -> "Space Shuttle: A Journey into Space" 
+ "Space Jockey" -> "Space Invaders" 
+ "Space Canyon" -> "Space Cavern" 
+ "Space Canyon" -> "Space Attack" 
+ "Space Grid" -> "Space Jockey" 
+ "Space Grid" -> "Space Canyon" 
+ "Sorcerer" -> "Sorcerer's Apprentice" 
+ "Sorcerer" -> "Solaris" 
+ "Snoopy and the Red Baron" -> "Solar Fox" 
+ "Snoopy and the Red Baron" -> "Sneak 'N Peek" 
+ "Solar Storm" -> "Sorcerer" 
+ "Solar Storm" -> "Snoopy and the Red Baron" 
+ "Space Adventure" -> "Space Grid" 
+ "Space Adventure" -> "Solar Storm" 
+ "Space War" -> "Spitfire Attack" 
+ "Space War" -> "Space Adventure" 
+ "Star Raiders" -> "Street Racer" 
+ "Star Raiders" -> "Space War" 
+ "Surfer's Paradise: But Danger Below!" -> "Towering Inferno" 
+ "Surfer's Paradise: But Danger Below!" -> "Star Raiders" 
+ "Slot Racers" -> "Smurf: Rescue in Gargamel's Castle" 
+ "Slot Racers" -> "Slot Machine" 
+ "Sky Diver" -> "Sky Jinks" 
+ "Sky Diver" -> "Skiing" 
+ "Sky Skipper" -> "Slot Racers" 
+ "Sky Skipper" -> "Sky Diver" 
+ "Sir Lancelot" -> "Skate Boardin': A Radical Adventure" 
+ "Sir Lancelot" -> "Shuttle Orbiter" 
+ "Sentinel" -> "Shark Attack" 
+ "Sentinel" -> "Secret Quest" 
+ "Shootin' Gallery" -> "Sir Lancelot" 
+ "Shootin' Gallery" -> "Sentinel" 
+ "Skeet Shoot" -> "Sky Skipper" 
+ "Skeet Shoot" -> "Shootin' Gallery" 
+ "Seahawk" -> "Seamonster" 
+ "Seahawk" -> "Sea Hunt" 
+ "Save Our Ship" -> "Scuba Diver" 
+ "Save Our Ship" -> "Rubik's Cube" 
+ "Sea Hawk" -> "Seahawk" 
+ "Sea Hawk" -> "Save Our Ship" 
+ "Robot Tank" -> "Roc'n Rope" 
+ "Robot Tank" -> "Robot Commando Raid" 
+ "Road Runner" -> "Robin Hood" 
+ "Road Runner" -> "River Raid II" 
+ "Robin Hood/Sir Lancelot - The Joust" -> "Robot Tank" 
+ "Robin Hood/Sir Lancelot - The Joust" -> "Road Runner" 
+ "Room of Doom" -> "Sea Hawk" 
+ "Room of Doom" -> "Robin Hood/Sir Lancelot - The Joust" 
+ "Seaquest" -> "Skeet Shoot" 
+ "Seaquest" -> "Room of Doom" 
+ "Riddle of the Sphinx" -> "River Patrol" 
+ "Riddle of the Sphinx" -> "Revenge of the Beefsteak Tomatoes" 
+ "RealSports Volleyball" -> "Red Sea Crossing" 
+ "RealSports Volleyball" -> "RealSports Tennis" 
+ "Rescue Terra 1" -> "Riddle of the Sphinx" 
+ "Rescue Terra 1" -> "RealSports Volleyball" 
+ "RealSports Boxing" -> "RealSports Football" 
+ "RealSports Boxing" -> "RealSports Baseball" 
+ "Ram It" -> "Rampage" 
+ "Ram It" -> "Raiders of the Lost Ark" 
+ "Reactor" -> "RealSports Boxing" 
+ "Reactor" -> "Ram It" 
+ "RealSports Soccer" -> "Rescue Terra 1" 
+ "RealSports Soccer" -> "Reactor" 
+ "Radar" -> "Radar Lock" 
+ "Radar" -> "Racquetball" 
+ "Quest for Quintana Roo" -> "Quick Step" 
+ "Quest for Quintana Roo" -> "Quadrun" 
+ "Rabbit Transit (cassette)" -> "Radar" 
+ "Rabbit Transit (cassette)" -> "Quest for Quintana Roo" 
+ "Pyramid War" -> "Q*bert" 
+ "Pyramid War" -> "Private Eye" 
+ "Popeye" -> "Porky's" 
+ "Popeye" -> "Pooyan" 
+ "Pressure Cooker" -> "Pyramid War" 
+ "Pressure Cooker" -> "Popeye" 
+ "Q*bert's Qubes" -> "Rabbit Transit (cassette)" 
+ "Q*bert's Qubes" -> "Pressure Cooker" 
+ "Raft Rider" -> "RealSports Soccer" 
+ "Raft Rider" -> "Q*bert's Qubes" 
+ "River Raid" -> "Seaquest" 
+ "River Raid" -> "Raft Rider" 
+ "Plaque Attack" -> "Polaris" 
+ "Plaque Attack" -> "Planeten Patrouile" 
+ "Pitfall II: Lost Caverns" -> "Pitfall!" 
+ "Pitfall II: Lost Caverns" -> "Piraten-Schiff" 
+ "Planet Patrol" -> "Plaque Attack" 
+ "Planet Patrol" -> "Pitfall II: Lost Caverns" 
+ "Piece o' Cake" -> "Pigs in Space" 
+ "Piece o' Cake" -> "Picnic" 
+ "Philly Flasher" -> "Phoenix" 
+ "Philly Flasher" -> "Phaser Patrol (cassette)" 
+ "Pick 'n Pile" -> "Piece o' Cake" 
+ "Pick 'n Pile" -> "Philly Flasher" 
+ "Pinball" -> "Planet Patrol" 
+ "Pinball" -> "Pick 'n Pile" 
+ "Pete Rose Baseball" -> "Phantom Tank" 
+ "Pete Rose Baseball" -> "Pepsi Invaders" 
+ "Party Mix (cassette)" -> "PelÃ©'s Soccer AKA Championship Soccer" 
+ "Party Mix (cassette)" -> "Paris Attack" 
+ "Pengo" -> "Pete Rose Baseball" 
+ "Pengo" -> "Party Mix (cassette)" 
+ "Pac-Man" -> "Panda Chase" 
+ "Pac-Man" -> "Pac-Kong" 
+ "Othello" -> "Out of Control" 
+ "Othello" -> "Oscar's Trash Race" 
+ "Outlaw" -> "Pac-Man" 
+ "Outlaw" -> "Othello" 
+ "Parachute" -> "Pengo" 
+ "Parachute" -> "Outlaw" 
+ "Phantom-Panzer" -> "Pinball" 
+ "Phantom-Panzer" -> "Parachute" 
+ "Oink!" -> "Omega Race" 
+ "Oink!" -> "Off the Wall" 
+ "Obelix" -> "Ocean City Defender" 
+ "Obelix" -> "Nuts" 
+ "Off Your Rocker" -> "Oink!" 
+ "Off Your Rocker" -> "Obelix" 
+ "Night Stalker" -> "Nightmare" 
+ "Night Stalker" -> "Night Driver" 
+ "Ms. Pac-Man" -> "My Golf" 
+ "Ms. Pac-Man" -> "Mr. Postman" 
+ "Name This Game" -> "Night Stalker" 
+ "Name This Game" -> "Ms. Pac-Man" 
+ "No Escape!" -> "Off Your Rocker" 
+ "No Escape!" -> "Name This Game" 
+ "Mouse Trap" -> "Mr. Do!" 
+ "Mouse Trap" -> "Mountain King" 
+ "MotoRodeo" -> "Motocross" 
+ "MotoRodeo" -> "Moonsweeper" 
+ "Motocross Racer" -> "Mouse Trap" 
+ "Motocross Racer" -> "MotoRodeo" 
+ "Mogul Maniac" -> "Montezuma's Revenge: Starring Panama Joe" 
+ "Mogul Maniac" -> "Mission Survive" 
+ "Missile Command" -> "Missile Control" 
+ "Missile Command" -> "Miniature Golf" 
+ "Mission 3000 A.D." -> "Mogul Maniac" 
+ "Mission 3000 A.D." -> "Missile Command" 
+ "Moon Patrol" -> "Motocross Racer" 
+ "Moon Patrol" -> "Mission 3000 A.D." 
+ "Mr. Do's Castle" -> "No Escape!" 
+ "Mr. Do's Castle" -> "Moon Patrol" 
+ "Open Sesame" -> "Phantom-Panzer" 
+ "Open Sesame" -> "Mr. Do's Castle" 
+ "Pole Position" -> "River Raid" 
+ "Pole Position" -> "Open Sesame" 
+ "Snail Against Squirrel" -> "Surfer's Paradise: But Danger Below!" 
+ "Snail Against Squirrel" -> "Pole Position" 
+ "Miner 2049er" -> "Miner 2049er II" 
+ "Miner 2049er" -> "Millipede" 
+ "MegaBoy" -> "Megamania" 
+ "MegaBoy" -> "Mega Force" 
+ "Midnight Magic" -> "Miner 2049er" 
+ "Midnight Magic" -> "MegaBoy" 
+ "Masters of the Universe: The Power of He-Man" -> "Math Gran Prix" 
+ "Masters of the Universe: The Power of He-Man" -> "Master Builder" 
+ "Marauder" -> "Marine Wars" 
+ "Marauder" -> "Mangia" 
+ "Mario Bros." -> "Masters of the Universe: The Power of He-Man" 
+ "Mario Bros." -> "Marauder" 
+ "Maze Craze: A Game of Cops and Robbers" -> "Midnight Magic" 
+ "Maze Craze: A Game of Cops and Robbers" -> "Mario Bros." 
+ "M.A.D." -> "MagiCard" 
+ "M.A.D." -> "M*A*S*H" 
+ "Lock 'n' Chase" -> "London Blitz" 
+ "Lock 'n' Chase" -> "Lochjaw" 
+ "Lost Luggage" -> "M.A.D." 
+ "Lost Luggage" -> "Lock 'n' Chase" 
+ "Laser Blast" -> "Laser Gates" 
+ "Laser Blast" -> "Lady in Wading" 
+ "Kool-Aid Man" -> "Krull" 
+ "Kool-Aid Man" -> "Knight on the Town" 
+ "Kung-Fu Master" -> "Laser Blast" 
+ "Kung-Fu Master" -> "Kool-Aid Man" 
+ "Laser Volley" -> "Lost Luggage" 
+ "Laser Volley" -> "Kung-Fu Master" 
+ "Malagai" -> "Maze Craze: A Game of Cops and Robbers" 
+ "Malagai" -> "Laser Volley" 
+ "Killer Satellites (cassette)" -> "King Kong" 
+ "Killer Satellites (cassette)" -> "Keystone Kapers" 
+ "Kaboom!" -> "Kangaroo" 
+ "Kaboom!" -> "Jungle Hunt" 
+ "Karate" -> "Killer Satellites (cassette)" 
+ "Karate" -> "Kaboom!" 
+ "Joust" -> "Jr. Pac-Man" 
+ "Joust" -> "Journey Escape" 
+ "International Soccer" -> "James Bond 007" 
+ "International Soccer" -> "Infiltrate" 
+ "Jawbreaker" -> "Joust" 
+ "Jawbreaker" -> "International Soccer" 
+ "Jungle Fever" -> "Karate" 
+ "Jungle Fever" -> "Jawbreaker" 
+ "Ikari Warriors" -> "Inca Gold" 
+ "Ikari Warriors" -> "Ice Hockey" 
+ "Human Cannonball" -> "Hunt & Score (see Concentration)" 
+ "Human Cannonball" -> "Home Run" 
+ "I Want My Mommy" -> "Ikari Warriors" 
+ "I Want My Mommy" -> "Human Cannonball" 
+ "Hangman" -> "Harbor Escape" 
+ "Hangman" -> "Halloween" 
+ "Guardian" -> "Gyruss" 
+ "Guardian" -> "Gremlins" 
+ "H.E.R.O." -> "Hangman" 
+ "H.E.R.O." -> "Guardian" 
+ "Haunted House" -> "I Want My Mommy" 
+ "Haunted House" -> "H.E.R.O." 
+ "Indy 500" -> "Jungle Fever" 
+ "Indy 500" -> "Haunted House" 
+ "Klax" -> "Malagai" 
+ "Klax" -> "Indy 500" 
+ "Grand Prix" -> "Gravitar" 
+ "Grand Prix" -> "Gorf" 
+ "Glib" -> "Golf" 
+ "Glib" -> "Glacier Patrol" 
+ "Gopher" -> "Grand Prix" 
+ "Gopher" -> "Glib" 
+ "Ghostbusters" -> "Ghostbusters II" 
+ "Ghostbusters" -> "Ghost Manor/Spike's Peak" 
+ "Gauntlet" -> "General Retreat" 
+ "Gauntlet" -> "Gas Hog" 
+ "Ghost Manor" -> "Ghostbusters" 
+ "Ghost Manor" -> "Gauntlet" 
+ "Gigolo" -> "Gopher" 
+ "Gigolo" -> "Ghost Manor" 
+ "Galaxian" -> "Gamma-Attack" 
+ "Galaxian" -> "G.I. Joe: Cobra Strike" 
+ "Frogs and Flies" -> "Front Line" 
+ "Frogs and Flies" -> "Frogger II: ThreeeDeep!" 
+ "Frostbite" -> "Galaxian" 
+ "Frostbite" -> "Frogs and Flies" 
+ "Frankenstein's Monster" -> "Freeway" 
+ "Frankenstein's Monster" -> "Football" 
+ "Fishing Derby" -> "Flag Capture" 
+ "Fishing Derby" -> "Fisher Price" 
+ "Flash Gordon" -> "Frankenstein's Monster" 
+ "Flash Gordon" -> "Fishing Derby" 
+ "Frogger" -> "Frostbite" 
+ "Frogger" -> "Flash Gordon" 
+ "Gangster Alley" -> "Gigolo" 
+ "Gangster Alley" -> "Frogger" 
+ "Fire Fighter" -> "Fire Fly" 
+ "Fire Fighter" -> "Final Approach" 
+ "Fatal Run" -> "Fathom" 
+ "Fatal Run" -> "Fast Food" 
+ "Fighter Pilot" -> "Fire Fighter" 
+ "Fighter Pilot" -> "Fatal Run" 
+ "Fantastic Voyage" -> "Farmer Dan" 
+ "Fantastic Voyage" -> "Extra Terrestrials" 
+ "Espial" -> "Exocet" 
+ "Espial" -> "Escape from the Mindmaster (cassette)" 
+ "Exocet Missile" -> "Fantastic Voyage" 
+ "Exocet Missile" -> "Espial" 
+ "Fast Eddie" -> "Fighter Pilot" 
+ "Fast Eddie" -> "Exocet Missile" 
+ "Encounter at L-5" -> "Enduro" 
+ "Encounter at L-5" -> "Eli's Ladder" 
+ "Earth Dies Screaming" -> "Eddy Langfinger; der Museumsdieb" 
+ "Earth Dies Screaming" -> "Earth Attack" 
+ "Eggomania" -> "Encounter at L-5" 
+ "Eggomania" -> "Earth Dies Screaming" 
+ "Dragster" -> "Dungeon Master" 
+ "Dragster" -> "Dragonstomper (cassette)" 
+ "Double Dunk" -> "Dragon Treasure" 
+ "Double Dunk" -> "Double Dragon" 
+ "Dragonfire" -> "Dragster" 
+ "Dragonfire" -> "Double Dunk" 
+ "E.T. the Extra-Terrestrial" -> "Eggomania" 
+ "E.T. the Extra-Terrestrial" -> "Dragonfire" 
+ "Entombed" -> "Fast Eddie" 
+ "Entombed" -> "E.T. the Extra-Terrestrial" 
+ "Fireball (cassette)" -> "Gangster Alley" 
+ "Fireball (cassette)" -> "Entombed" 
+ "Great Escape" -> "Klax" 
+ "Great Escape" -> "Fireball (cassette)" 
+ "Donald Duck's Speedboat" -> "Donkey Kong" 
+ "Donald Duck's Speedboat" -> "Dolphin" 
+ "Dig Dug" -> "Dishaster" 
+ "Dig Dug" -> "Dice Puzzle" 
+ "Dodge 'Em" -> "Donald Duck's Speedboat" 
+ "Dodge 'Em" -> "Dig Dug" 
+ "Demon Attack" -> "Demons to Diamonds" 
+ "Demon Attack" -> "Demolition Herby" 
+ "Death Trap" -> "Defender" 
+ "Death Trap" -> "Deadly Duck" 
+ "Defender II" -> "Demon Attack" 
+ "Defender II" -> "Death Trap" 
+ "Desert Falcon" -> "Dodge 'Em" 
+ "Desert Falcon" -> "Defender II" 
+ "Dark Cavern" -> "Dark Chambers" 
+ "Dark Cavern" -> "Dancing Plate" 
+ "Crystal Castles" -> "Cubicolor" 
+ "Crystal Castles" -> "Crypts of Chaos" 
+ "Custer's Revenge" -> "Dark Cavern" 
+ "Custer's Revenge" -> "Crystal Castles" 
+ "Cross Force" -> "Crossbow" 
+ "Cross Force" -> "Creature Strike" 
+ "Crackpots" -> "Crash Dive" 
+ "Crackpots" -> "Crab Control" 
+ "Crazy Climber" -> "Cross Force" 
+ "Crazy Climber" -> "Crackpots" 
+ "Cruise Missile" -> "Custer's Revenge" 
+ "Cruise Missile" -> "Crazy Climber" 
+ "Deadly Discs" -> "Desert Falcon" 
+ "Deadly Discs" -> "Cruise Missile" 
+ "Cosmic Creeps" -> "Cosmic Free Fire" 
+ "Cosmic Creeps" -> "Cosmic Corridor" 
+ "Cookie Monster Munch" -> "Cosmic Ark" 
+ "Cookie Monster Munch" -> "Congo Bongo" 
+ "Cosmic Commuter" -> "Cosmic Creeps" 
+ "Cosmic Commuter" -> "Cookie Monster Munch" 
+ "Communist Mutants from Space (cassette)" -> "Condor Attack" 
+ "Communist Mutants from Space (cassette)" -> "Commando Raid" 
+ "Codebreaker" -> "Combat" 
+ "Codebreaker" -> "Coconuts" 
+ "Commando" -> "Communist Mutants from Space (cassette)" 
+ "Commando" -> "Codebreaker" 
+ "Confrontation" -> "Cosmic Commuter" 
+ "Confrontation" -> "Commando" 
+ "Chuck Norris Superkicks/Ghost Manor" -> "Chuck Norris Superkicks/Spike's Peak" 
+ "Chuck Norris Superkicks/Ghost Manor" -> "Chuck Norris Superkicks" 
+ "Checkers" -> "China Syndrome" 
+ "Checkers" -> "Chase the Chuck Wagon" 
+ "Chopper Command" -> "Chuck Norris Superkicks/Ghost Manor" 
+ "Chopper Command" -> "Checkers" 
+ "Centipede" -> "Challenge" 
+ "Centipede" -> "Cathouse Blues" 
+ "Canyon Bomber" -> "Carnival" 
+ "Canyon Bomber" -> "California Games" 
+ "Casino" -> "Centipede" 
+ "Casino" -> "Canyon Bomber" 
+ "Challenge of Nexar" -> "Chopper Command" 
+ "Challenge of Nexar" -> "Casino" 
+ "Circus Atari" -> "Confrontation" 
+ "Circus Atari" -> "Challenge of Nexar" 
+ "Cosmic Swarm" -> "Deadly Discs" 
+ "Cosmic Swarm" -> "Circus Atari" 
+ "Burning Desire" -> "Busy Police" 
+ "Burning Desire" -> "BurgerTime" 
+ "Bugs" -> "Bump 'n' Jump" 
+ "Bugs" -> "Buck Rogers: Planet of Zoom" 
+ "Bumper Bash" -> "Burning Desire" 
+ "Bumper Bash" -> "Bugs" 
+ "àÒ€|U" -> "Buck Rogers: Planet of Zoom" 
+ "àÒ€|U" -> "Breakout" 
+ "Bridge" -> "Bumper Bash" 
+ "Bridge" -> "àÒ€|U" 
+ "Big Bird's Egg Catch" -> "Birthday Mania" 
+ "Big Bird's Egg Catch" -> "Berzerk" 
+ "Berenstain Bears" -> "Bermuda" 
+ "Berenstain Bears" -> "Beat Em and Eat Em" 
+ "Bermuda Triangle" -> "Big Bird's Egg Catch" 
+ "Bermuda Triangle" -> "Berenstain Bears" 
+ "Battlezone" -> "Beamrider" 
+ "Battlezone" -> "Basketball" 
+ "Barnstorming" -> "Base Attack" 
+ "Barnstorming" -> "Bank Heist" 
+ "Basic Math AKA Fun With Numbers" -> "Battlezone" 
+ "Basic Math AKA Fun With Numbers" -> "Barnstorming" 
+ "Beany Bopper" -> "Bermuda Triangle" 
+ "Beany Bopper" -> "Basic Math AKA Fun With Numbers" 
+ "Blackjack" -> "Bridge" 
+ "Blackjack" -> "Beany Bopper" 
+ "Bachelor Party" -> "Bachelorette Party" 
+ "Bachelor Party" -> "BMX Airmaster" 
+ "Atlantis" -> "Atlantis II" 
+ "Atlantis" -> "Atari Video Cube" 
+ "BASIC Programming" -> "Bachelor Party" 
+ "BASIC Programming" -> "Atlantis" 
+ "Asterix" -> "Asteroids" 
+ "Asterix" -> "Assault" 
+ "Artillery Duel/Chuck Norris Superkicks" -> "Artillery Duel/Ghost Manor" 
+ "Artillery Duel/Chuck Norris Superkicks" -> "Artillery Duel" 
+ "Artillery Duel/Spike's Peak" -> "Asterix" 
+ "Artillery Duel/Spike's Peak" -> "Artillery Duel/Chuck Norris Superkicks" 
+ "Astroblast" -> "BASIC Programming" 
+ "Astroblast" -> "Artillery Duel/Spike's Peak" 
+ "Alpha Beam with Ernie" -> "Amidar" 
+ "Alpha Beam with Ernie" -> "Alien's Return" 
+ "Air-Sea Battle" -> "Airlock" 
+ "Air-Sea Battle" -> "Air Raiders" 
+ "Alien" -> "Alpha Beam with Ernie" 
+ "Alien" -> "Air-Sea Battle" 
+ "Adventure" -> "Adventures of Tron" 
+ "Adventure" -> "Acid Drop" 
+ "3-D Tic-Tac-Toe" -> "32 in 1" 
+ "3-D Tic-Tac-Toe" -> "
+" 
+ "A Game of Concentration" -> "Adventure" 
+ "A Game of Concentration" -> "3-D Tic-Tac-Toe" 
+ "Air Raid" -> "Alien" 
+ "Air Raid" -> "A Game of Concentration" 
+ "Armor Ambush" -> "Astroblast" 
+ "Armor Ambush" -> "Air Raid" 
+ "Backgammon" -> "Blackjack" 
+ "Backgammon" -> "Armor Ambush" 
+ "Cakewalk" -> "Cosmic Swarm" 
+ "Cakewalk" -> "Backgammon" 
+ "Donkey Kong Junior" -> "Great Escape" 
+ "Donkey Kong Junior" -> "Cakewalk" 
+ "Mines of Minos" -> "Snail Against Squirrel" 
+ "Mines of Minos" -> "Donkey Kong Junior" 

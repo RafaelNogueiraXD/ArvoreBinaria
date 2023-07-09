@@ -345,5 +345,76 @@ void limpaTela(){
     #else
     #endif
 }
+int temSimboloInvalido(const char* palavra) {
+    for (int i = 0; palavra[i] != '\0'; i++) {
+        if (palavra[i] == '\xEF' && palavra[i + 1] == '\xBF' && palavra[i + 2] == '\xBD') {
+            return 1;
+        }
+    }
+    return 0;
+}
+char* corrindoPossiveisErros(const char* str) {
+    const char invalid_chars[] = {'\n', '\r', '\t', '\b', '\a', '\0'};
+    const size_t invalid_chars_count = sizeof(invalid_chars) / sizeof(invalid_chars[0]);
+    const char* bug = "nomeBug";
+    size_t str_len = strlen(str);
+    char* result = (char*)malloc((str_len + 1) * sizeof(char));
+
+    for (size_t i = 0; i < str_len; i++) {
+        char current_char = str[i];
+        int is_invalid = 0;
+
+        for (size_t j = 0; j < invalid_chars_count; j++) {
+            if (current_char == invalid_chars[j]) {
+                is_invalid = 1;
+                break;
+            }
+        }
+
+        result[i] = is_invalid ? bug[0] : current_char;
+    }
+    if (strcmp("�rq�U", str) == 0 ||
+    strcmp("\xEF\xBF\xBD\x43\x74\x17\xEF\xBF\xBD\x55", str) == 0 ||
+    strcmp("\x17\xEF\xBF\xBD\x55", str) == 0) {
+        strcpy(str, bug);
+    }
+
+    result[str_len] = '\0';
+
+    return str;
+}
+void substituirSimbolosInvalidos(const char* nomeArquivo) {
+    FILE* arquivo = fopen(nomeArquivo, "r+");
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+
+    fseek(arquivo, 0, SEEK_END);
+    long tamanho = ftell(arquivo);
+    fseek(arquivo, 0, SEEK_SET);
+
+    char* conteudo = (char*)malloc((tamanho + 1) * sizeof(char));
+    if (conteudo == NULL) {
+        printf("Erro ao alocar memória.\n");
+        fclose(arquivo);
+        return;
+    }
+
+    fread(conteudo, sizeof(char), tamanho, arquivo);
+
+    for (long i = 0; i < tamanho; i++) {
+        if (conteudo[i] == '\xEF' && conteudo[i + 1] == '\xBF' && conteudo[i + 2] == '\xBD') {
+            conteudo[i] = 'a';
+        }
+    }
+
+    fseek(arquivo, 0, SEEK_SET);
+    fwrite(conteudo, sizeof(char), tamanho, arquivo);
+
+    fclose(arquivo);
+    free(conteudo);
+}
+
 
 

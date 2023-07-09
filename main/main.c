@@ -5,33 +5,49 @@
 #include "../bibliotecas/funcoes.h"
 #include "../bibliotecas/funcoesAtv.h"
 #include "../bibliotecas/busca.h"
-void imprimiGraphviz(jogo* root) {
-    FILE* arq = fopen("../dados/graph.txt", "a");
+void imprimiGraphviz(jogo* root,char *caminho) {
+    FILE* arq = fopen(caminho, "a");
     if (arq == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return;
     }
 
     if (root->direita != NULL) {
-        printf(" %s -> %s \n", root->chave, root->direita->chave);
+        // printf(" %s -> %s \n", root->chave, root->direita->chave);
         fprintf(arq, " \"%s\" -> \"%s\" \n", root->chave, root->direita->chave);
-        imprimiGraphviz(root->direita);
+        imprimiGraphviz(root->direita,caminho);
     }
     if (root->esquerda != NULL) {
-        printf(" %s -> %s \n", root->chave, root->esquerda->chave);
+        // printf(" %s -> %s \n", root->chave, root->esquerda->chave);
         fprintf(arq, " \"%s\" -> \"%s\" \n", root->chave, root->esquerda->chave);
-        imprimiGraphviz(root->esquerda);
+        imprimiGraphviz(root->esquerda,caminho);
     }
 
-    // fprintf(arq, " \"%s\" [label=\"%s\"]\n", root->chave, root->chave);
     fclose(arq);
 }
-void colorindo(jogo* root) {
-    if (root == NULL) {
-        return;
+unsigned int funcHash(const char* str) {
+    unsigned int hash = 5381;
+    int c;
+
+    while ((c = *str++)) {
+        hash = ((hash << 5) + hash) + c; // hash * 33 + c
     }
 
-    FILE* arq = fopen("../dados/graph.txt", "w");
+    return hash;
+}
+
+char* pegaCorAleatoria(const char* key) {
+    unsigned int hash = funcHash(key);
+    char* color = (char*)malloc(8 * sizeof(char));
+    sprintf(color, "#%06X", (hash & 0xFFFFFF));
+
+    return color;
+}
+void printaCorNo(jogo* root) {
+    if (root == NULL)
+        return;
+
+    FILE* arq = fopen("../dados/graphCorAlearia.txt", "w");
     if (arq == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return;
@@ -43,18 +59,15 @@ void colorindo(jogo* root) {
     int levelCount = 0;
     int currentLevelCount = 1;
     int nextLevelCount = 0;
-    char color[100];
 
     fprintf(arq, "node [style=filled];\n");
-
-    strcpy(color, "red");
 
     queue[rear++] = root;
 
     while (front < rear) {
         jogo* current = queue[front++];
-        printf("%s ", current->chave);
-        fprintf(arq, "\"%s\" [fillcolor=%s]\n", current->chave, color);
+        // printf("%s ", current->chave);
+        fprintf(arq, "\"%s\" [fillcolor=\"%s\", label=\"%s\"]\n", current->chave, pegaCorAleatoria(current->chave), current->chave);
         currentLevelCount--;
 
         if (current->esquerda != NULL) {
@@ -70,39 +83,21 @@ void colorindo(jogo* root) {
             levelCount++;
             currentLevelCount = nextLevelCount;
             nextLevelCount = 0;
-
-            if (currentLevelCount > 0) {
-                printf("\nNível %d: ", levelCount + 1);
-                if (levelCount == 2)
-                    strcpy(color, "cian");
-                else if (levelCount == 3)
-                    strcpy(color, "yellow");
-                else if (levelCount == 4)
-                    strcpy(color, "purple");
-                else if (levelCount == 5)
-                    strcpy(color, "green");
-                else if (levelCount == 6)
-                    strcpy(color, "blue");
-                else if (levelCount == 7)
-                    strcpy(color, "pink");
-                else if (levelCount == 8)
-                    strcpy(color, "orange");
-                else if (levelCount > 9)
-                    strcpy(color, "grey");
-            }
         }
     }
-
-    printf("\n");
 
     fclose(arq);
     free(queue);
 }
+
 int main() {
     Container* container = alocaContainer();
     char** VetorNomes = NULL;
     int total = 0, opcao;
     char caracter[MAX_TAM_NOME], op[MAX_TAM_NOME];
+    char* nome[MAX_TAM_NOME];
+    char* nome2[MAX_TAM_NOME];
+    char* nome3[MAX_TAM_NOME];
     container->arvore = lerArquivo2("../dados/customizado.csv", &VetorNomes, &total);
     if (container->arvore == NULL) {
         liberarMemoria(VetorNomes, total);
@@ -159,8 +154,12 @@ int main() {
             addImagens(container->arvore,obterChar("nome",1));
         break;
         case 8:
-            colorindo(container->arvore);
-            imprimiGraphviz(container->arvore);
+            printf("\n\n Exportando arquivo, obrigado por usar o programa!!");
+            printf("\n\n até breve.");
+            printaCorNo(container->arvore);
+            imprimiGraphviz(container->arvore,"../dados/graphCorAlearia.txt");
+            substituirSimbolosInvalidos("../dados/graphCorAlearia.txt");
+            opcao = 0;
         break;
         default:
             printf("\nOpcao invalida!\n");
@@ -171,8 +170,11 @@ int main() {
             getchar();
         }
     } while (opcao != 0);
+    printf("\n\n Após exportar o programa eh sempre encerrado !!");
+
     liberarArvore(container->arvore);
     liberarMemoria(VetorNomes, total);
 
     return 0;
 }
+
